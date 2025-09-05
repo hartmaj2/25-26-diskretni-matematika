@@ -2,16 +2,18 @@
 
 ## Planning
 
+- [ ] send mail to Pangrac about the tutorial
 - [ ] workout plan for preparation (use Google Sheets)
   - [ ] write out a list of topics I need to go through (Use syllabus from MM)
   - [ ] plan what topic to handle each day
 
 ## Technical 
 
-- [ ] init and publish this repo to GitHub
-- [ ] download materials from Katia
+- [x] init and publish this repo to GitHub
+- [x] download materials from Katia
+- [x] write an about page for the tutorial on my teacher website
+- [ ] prepare topics to Owl (unpublished)
 - [ ] upload exercises from Katia to Owl
-- [ ] write about page for the tutorial
 
 ## Skills
 
