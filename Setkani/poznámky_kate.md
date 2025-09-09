@@ -14,9 +14,9 @@
 - připravit si předem, ale pak JITovat dle toho, co se stihne na přednášky
 
 ### Sova 
-    - krátké identy
-    - batch operations - publish
-    - dobré názvy úkolů
+- krátké identy
+- batch operations - publish
+- dobré názvy úkolů
 
 ### Zdroje
 
