@@ -18,9 +18,12 @@ Pokud vážíme $k$ krát, tak počet získaných bitů informace je $k \cdot \l
 
 ## Topinka
 
+Úloha by se měla formulovat takto:
+> Jsme chudý student a nemáme peníze na topinkovač. Proto opékáme topinky na pánvi a na tu se vejdou nejvýše dvě topinky naráz. Každá strana topinky se musí smažit 2 minuty, aby byla hotová. Jak rychle dokážeme usmažit 3 topinky?
+
 Máme $n$ topinek a chceme opéct celkem $2n$ stran. Pravidlo říká, můžeme opéct vždy 2 strany topinek naráz, ale nesmí to být 2 strany jedné a té samé topinky.
 
-Pokud bychom použili hladový způsob, tak bychom opekli nejprve dva z jedné strany a pak z druhé. Potom už bychom však nemohli využít oba sloty topinkovače.
+Pokud bychom použili hladový způsob, tak bychom opekli nejprve dva z jedné strany a pak z druhé. Potom už bychom však nemohli využít oba sloty naší pánve.
 
 ## Popletené truhly
 
