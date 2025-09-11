@@ -42,3 +42,9 @@ A má jako biologickou matku B
 A je rodné číslo B
 
 
+### Uspořádání, které je zároveň i funkcí? Existuje ekvivalence, která je zároveň funkcí?
+Jakmile máme aspoň tři prvky, a využijeme-li tranzitivitu, tak se nám rozbije podmínka funkci o jednoznačnosti obrazu.
+
+Například identita je funkce a splňuje jak vlastnosti uspořádání, tak i vlastnosti ekvivalence.
+
+
