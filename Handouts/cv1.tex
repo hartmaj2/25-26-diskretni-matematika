@@ -7,6 +7,7 @@
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 \usepackage{amsthm}
+\usepackage{mathtools}
 
 %% metadata settings
 \newcommand{\tutnum}{0}
@@ -34,15 +35,23 @@
 
 
 % theorem styles
+\newtheoremstyle{definitionstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.}{ }{\thmname{#1}}
 \newtheoremstyle{problemstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.\newline}{ }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
 
 % theorems
+\theoremstyle{definitionstyle}
+\newtheorem{defn}{Definice}
 \theoremstyle{problemstyle}
 \newtheorem{problem}{Příklad}
 
 % Document body
 \begin{document}
+
 \titlerule
+
+\begin{defn}[Fibonacciho číslo]
+Definujeme Fibonacciho čísla následovně: $F_1 \coloneq 0$, $F_2 \coloneq 1$ a pro $n > 2$ je $F_n \coloneq F_{n-1}+F_{n-2}$
+\end{defn}
 
 \begin{problem}[Rovnoramenná váha]
 Máme k dispozici rovnoramennou váhu a 9 mincí. Jedna z mincí je ovšem falešná, což se pozná tak, že je lehčí než ostatní mince, které váží všechny stejně. Na kolik nejméně vážení dokážeme zjistit, která z mincí je falešná?
