@@ -1,30 +1,55 @@
 % Document class
-\documentclass[11pt]{article}
+\documentclass[10pt]{article}
 
 % Preamble
-\usepackage[a5paper,margin=20mm]{geometry}
+\usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{titling}
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
+\usepackage{amsthm}
 
 %% metadata settings
-\title{0. cvičení z diskrétní matematiky}
+\newcommand{\tutnum}{0}
+\title{\tutnum. cvičení z diskrétní matematiky}
 \author{Jan Hartman}
 \date{29.9.2025}
+
 \newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
 
 
 %% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
 \pagestyle{fancy}
 \fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
-\fancyhead[L]{\small\thetitle}   % left -> title
-\fancyhead[C]{} % center -> unused
-\fancyhead[R]{\small\thedate}  % right -> date
-\fancyfoot[C]{\scriptsize Více info k předmětu: \url{\teacherurl}}  
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k předmětu: \url{\teacherurl}}  
+
+
+% theorem styles
+\newtheoremstyle{problemstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.\newline}{ }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+
+% theorems
+\theoremstyle{problemstyle}
+\newtheorem{problem}{Příklad}
 
 % Document body
 \begin{document}
+\titlerule
 
-\noindent
-Hello haha 
+\begin{problem}[Rovnoramenná váha]
+Máme k dispozici rovnoramennou váhu a 9 mincí. Jedna z mincí je ovšem falešná, což se pozná tak, že je lehčí než ostatní mince, které váží všechny stejně. Na kolik nejméně vážení dokážeme zjistit, která z mincí je falešná?
+\end{problem}
+
+\begin{problem}[Topinky]
+Jakožto chudý student nemající dost peněz na topinkovač si smažíme topinky na pánvi. Opéci jednu stranu topinky trvá 2 minuty. Na pánev se vejdou současně nejvýš dva krajíce. Jak dlouho bude trvat opečení 3 krajíců chleba?
+\end{problem}
+
 \end{document}
