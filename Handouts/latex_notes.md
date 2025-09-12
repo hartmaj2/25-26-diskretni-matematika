@@ -9,6 +9,10 @@ The format is `\documentclass[options]{class}`
 
 ## Preamble
 
+Possible to define pagestyle using `\pagestyle{style}` command:
+- style - plain, empty, headings
+  - with fancyheader - fancy
+
 Here list of all used packages:
 - geometry - sets the layout of the paper (a4,a5), margins etc.
   - pro tip - use `showframe` option for debugging
@@ -16,6 +20,10 @@ Here list of all used packages:
   - TODO: why we need `\pagestyle{fancy}` and `\fancyhf`
 - titling - allows to use metadata like title, author and date using `thetitle`, `thedate` etc.
 - hyperref - enables to use the `\url` command
+- amsthm (American Mathematical Society theorems) 
+  - allows for command `\newtheorem{env_name}{printed_name}`
+  - used with `\begin{env_name}`
+  - allows to create theorem styles `\newtheoremstyle{style name}{space above}{space below}{body font}{indent amount}{head font}{head punct}{after head space}{head spec}`
 
 ## Making new commands
 - use syntax `\newcommand{command_sequence}{action}`
