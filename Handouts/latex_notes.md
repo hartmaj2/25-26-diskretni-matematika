@@ -16,6 +16,7 @@ Possible to define pagestyle using `\pagestyle{style}` command:
 Here list of all used packages:
 - geometry - sets the layout of the paper (a4,a5), margins etc.
   - pro tip - use `showframe` option for debugging
+  - `includefoot` makes sure that the footer doesn't go outside of the page
 - fancyhdr - used to control headers and footers with `\fancyhead[align]{content}` and `\fancyhead{content}`
   - TODO: why we need `\pagestyle{fancy}` and `\fancyhf`
 - titling - allows to use metadata like title, author and date using `thetitle`, `thedate` etc.
