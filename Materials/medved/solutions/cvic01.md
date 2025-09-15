@@ -1,6 +1,6 @@
 # Řešení cvičení 1
 
-## Devatero mincí
+## Devatero mincí (GPT-hard 0)
 
 Každé vážení vyústí ve 3 možnosti:
 - levá strana těžší
@@ -16,7 +16,7 @@ Tím pádem musíme dostat # bitů někde mezi 1 a 2. Formálně počet bitů od
 Pokud vážíme $k$ krát, tak počet získaných bitů informace je $k \cdot \log_2{3} = \log_2{3^k}$, kde $3^k$ je počet stavů, které dokážeme rozlišit. To tedy odpovídá maximálnímu počtu mincí, ve kterém na $k$ vážení dokážeme identifikovat falešnou minci.
 
 
-## Topinka
+## Topinka (GPT-hard 0)
 
 Úloha by se měla formulovat takto:
 > Jsme chudý student a nemáme peníze na topinkovač. Proto opékáme topinky na pánvi a na tu se vejdou nejvýše dvě topinky naráz. Každá strana topinky se musí smažit 2 minuty, aby byla hotová. Jak rychle dokážeme usmažit 3 topinky?
@@ -25,7 +25,7 @@ Máme $n$ topinek a chceme opéct celkem $2n$ stran. Pravidlo říká, můžeme 
 
 Pokud bychom použili hladový způsob, tak bychom opekli nejprve dva z jedné strany a pak z druhé. Potom už bychom však nemohli využít oba sloty naší pánve.
 
-## Popletené truhly
+## Popletené truhly (GPT-hard 0)
 
 Dobře demonstruje různé způsoby znázornění problému:
 
@@ -39,7 +39,9 @@ Dobře demonstruje různé způsoby znázornění problému:
 
 Ta mi není hned jasná...
 
-## Lámání čokolády
+## Lámání čokolády (GPT-hard 1)
+
+### Mé řešení indukcí
 
 Nejprve si problém zjednodušíme. Nezáleží totiž na tom, jak máme čokoládu zrotovanou a můžeme tedy beztrestně předpokládat, že $n \geq m$ (tedy, že šířka čokolády je aspoň taková, jako je její výška).
 
@@ -54,4 +56,14 @@ My bychom chtěli ukázat, že ať už nepřítel bude lámat tuto čokoládu ja
 Když nepřítel udělal první zlom vodorovný, tak rozdělí čokoládu na dvě čokolády se stejnou dimenzí $n_0$ ale jedna bude mít druhou dimenzi $k < m_0$ a druhá $m_0 - k < m_0$. Jelikož obě ty čokolády jsou menší, než ta špatná, tak už musí být dobré a nedají se rozlomit na jiný počet zlomení než ten ze vzorečku. Tím dostaneme počet zlomení $k \cdot n_0 -1$ za první čokoládu a $(m_0 - k) \cdot n_0 - 1$ za druhou. Nesmíme také zapomenout na jedno zlomení, které nám rozdělilo tu špatnou čokoládu na dva kousky. Celkem máme tedy $k \cdot n_0 - 1 + (m_0 - k) \cdot n_0 - 1 + 1 = m_0 \cdot n_0 - 1$, což jsme chtěli dokázat. 
 
 Podobným argumentem můžeme dokázat i případ, kdy nepřítel první zlom provedl svislý.
+
+### Řešení ChatGPT
+
+Dokážeme, že potřebujeme přesně $mn - 1$ zlomení.
+
+Nyní na to půjdeme jinou cestou. Zeptáme se sami sebe, kolik rozlámaná čokoláda bude obsahovat dílků. No přeci nehledě na to, jak ji budeme lámat, tak nakonec musíme disponovat $mn$ dílky. Na začátku vždy máme jeden dílek. Potřebujeme tedy zvýšit počet dílků přesně o $mn-1$.
+
+Podívejme se, jak se změní po zlomení libovolného dílku v libovolném kroku počet dílků, kterými disponujeme. Řekněme, že na začátku máme $k$ dílků. Jeden z těchto dílků vezmeme a rozlomíme. Na konci tedy máme $k-1$ dílků na které jsme vůbec nešáhli a $2$ dílky držíme v ruce, takže celkem nám zbylo $k+1$ dílků. Uvědomme si, že tento počet je nezávislý na volbě dílku, který budeme lámat a na tom, kde konkrétně zlom provedeme.
+
+Jelikož každé zlomení navýší počet dílků o jedna a chceme navýšit o $mn-1$, tak provedeme přesně $mn-1$ zlomení.
 
