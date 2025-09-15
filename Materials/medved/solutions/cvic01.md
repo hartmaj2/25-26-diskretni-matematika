@@ -67,3 +67,16 @@ Podívejme se, jak se změní po zlomení libovolného dílku v libovolném krok
 
 Jelikož každé zlomení navýší počet dílků o jedna a chceme navýšit o $mn-1$, tak provedeme přesně $mn-1$ zlomení.
 
+## Šachovnice
+
+### Mé řešení
+
+Nejprve uděláme úvahu o tom, kolik máme k dispozici dominových dílků. Šachovnice s ukousnutými rohy má celkem 62 políček a tedy dominových dílků je 31. Každý dílek je otočený buď vodorovně nebo svisle. Z tohoto plyne, že buď lichý počet jich je otočený svisle a sudý vodorovně nebo obráceně.
+
+Tato podmínka sama o sobě k důkazu jistě nestačí, jelikož zatím nijak nezohledňujeme, že chybějící políčka šachovnice se nachází v opačných rozích. Kdyby například ležely ve stejném rohu ihned vedle sebe, tak by šachovnice dominovými dílky pokrýt šla.
+
+Potřebujeme se tedy zaměřit na jednotlivé řádky a uvědomit si, jak mohou obecně být dílky v řádcích poskládány. Budeme postupovat od prvního řádku zdola směrem nahoru. 
+
+Jelikož v prvním řádku chybí jedno políčko, tak máme k dispozici lichý počet políček, a tedy určitě nemůže vyčnívat z tohoto řádku sudý počet svislých dominových dílků. To by nám pak v tomto řádku zbyl lichý počet políček, který jistě nelze zaplit vodorovnými dominovými dílky. Tím nám na každém následujícím řádku nastane stejná situace až na ten předposlední. Tzn. celkem 7x máme lichý počet svislých dílků a v posledním řádku už žádný svislý dílek začínat nemůže. Máme tedy celkem lichý počet svislých dílků. 
+
+Analogicky však můžeme tuto úvahu provést i pro dílky vodorovné, což je spor s naším prvním pozorováním.
