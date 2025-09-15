@@ -67,7 +67,7 @@ Podívejme se, jak se změní po zlomení libovolného dílku v libovolném krok
 
 Jelikož každé zlomení navýší počet dílků o jedna a chceme navýšit o $mn-1$, tak provedeme přesně $mn-1$ zlomení.
 
-## Šachovnice
+## Šachovnice (GPT-hard 0)
 
 ### Mé řešení
 
@@ -80,3 +80,7 @@ Potřebujeme se tedy zaměřit na jednotlivé řádky a uvědomit si, jak mohou 
 Jelikož v prvním řádku chybí jedno políčko, tak máme k dispozici lichý počet políček, a tedy určitě nemůže vyčnívat z tohoto řádku sudý počet svislých dominových dílků. To by nám pak v tomto řádku zbyl lichý počet políček, který jistě nelze zaplit vodorovnými dominovými dílky. Tím nám na každém následujícím řádku nastane stejná situace až na ten předposlední. Tzn. celkem 7x máme lichý počet svislých dílků a v posledním řádku už žádný svislý dílek začínat nemůže. Máme tedy celkem lichý počet svislých dílků. 
 
 Analogicky však můžeme tuto úvahu provést i pro dílky vodorovné, což je spor s naším prvním pozorováním.
+
+### ChatGPT řešení (mnohem jednodušší)
+
+Všimneme si, že každý dominový dílek zakrývá vždy jedno bílé a jedno černé políčko šachovnice. Chybějící políčka jsou obě stejné barvy a tedy zbyde 32 políček jedné barvy a 30 políček druhé barvy. Jelikož dominových dílků je 31, tak bychom ovšem zakryli 31 bílých i 31 černých políček a toho nelze docílit.
