@@ -2,12 +2,14 @@
 \documentclass[10pt]{article}
 
 % Preamble
-\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
 \usepackage{titling}
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
+\usepackage[czech]{babel}
 \usepackage{amsthm}
 \usepackage{mathtools}
+\usepackage{enumitem} % for a,b,c enums
 
 %% metadata settings
 \newcommand{\tutnum}{0}
@@ -49,16 +51,68 @@
 
 \titlerule
 
-\begin{defn}[Fibonacciho číslo]
-Definujeme Fibonacciho čísla následovně: $F_1 \coloneq 0$, $F_2 \coloneq 1$ a pro $n > 2$ je $F_n \coloneq F_{n-1}+F_{n-2}$
+\section{Výroky}
+
+% Uvažujeme množinu států $A = \{ \text{Francie}, \text{Německo}, \text{Česko}, \text{Slovensko} \}$ a nechť $V(x,y)$ znamená, že stát $x$ vyváží víno do státu $y$. Vztah $V$ je znázorněn na diagramu níže.
+
+% \begin{wrapfigure}{r}{0.4\textwidth}
+%     \centering
+%     \includegraphics[width=2cm]{states.pdf}
+% \end{wrapfigure}
+% % \begin{problem}[Státy]
+
+\begin{minipage}{0.7\textwidth}
+V následujících příkladech uvažujeme množinu států: $$M = \{ \text{Francie}, \text{Německo}, \text{Česko}, \text{Slovensko} \}$$ a nechť $V(x,y)$ je zkratka pro výrok: „Stát $x$ vyváží víno do státu $y$.“. Vztah $V$ je znázorněn na diagramu vpravo.
+\end{minipage}%
+\hfill
+\begin{minipage}{0.15\textwidth}
+  \centering
+  \includegraphics[width=2.2cm]{states.pdf}
+\end{minipage}
+
+\begin{problem}[Překládání]
+Vyjádřete výroky v přirozeném jazyce matematicky a naopak:
+\begin{enumerate}[label=(\alph*)]
+    \item \text{Slovensko vyváží víno do Francie.}
+    \item $\exists y \in M : V(\text{Německo},y)$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Pořadí kvantifikátorů]
+Vyjádřete následující výroky slovy a následně určete, zda jsou pravdivé či lživé:
+\begin{enumerate}[label=(\alph*)]
+    \item $\forall x \in M \ \exists y \in M : V(x,y)$
+    \item $\forall x \in M \ \exists y \in M : V(y,x)$
+    \item $\exists x \in M \ \forall y \in M : V(x,y)$
+    \item $\exists x \in M \ \forall y \in M : V(y,x)$
+\end{enumerate}
+
+\end{problem}
+
+\section{Množiny}
+
+\begin{defn}
+    Definujeme symetrický rozdíl množin $A,B$ jako $A \bigtriangleup B \coloneq (A \setminus B) \cup (B \setminus A)$.
 \end{defn}
+
+\begin{problem}[Operace s množinami]
+Vyhodnoťe následující výrazy:
+\begin{enumerate}[label=(\alph*)]
+    \item $M \bigtriangleup \{ \text{Francie}, \text{Španělsko} \}$
+    \item $A \bigtriangleup A$ pro libovolnou množinu $A$
+    \item $(A \bigtriangleup A) \bigtriangleup A$ pro libovolnou množinu $A$
+
+\end{enumerate}
+\end{problem}
+
+\section{Hádanky}
+
+\begin{problem}[Topinky]
+Jakožto chudý student nemající dost peněz na topinkovač si smažíme topinky na pánvi. Opéci jednu stranu topinky trvá 2 minuty. Na pánev se vejdou současně nejvýš dva krajíce. Jak dlouho bude trvat opečení 3 krajíců chleba? Jak dlouho bude trvat opéct $n$ krajíců chleba?
+\end{problem}
 
 \begin{problem}[Rovnoramenná váha]
 Máme k dispozici rovnoramennou váhu a 9 mincí. Jedna z mincí je ovšem falešná, což se pozná tak, že je lehčí než ostatní mince, které váží všechny stejně. Na kolik nejméně vážení dokážeme zjistit, která z mincí je falešná?
-\end{problem}
-
-\begin{problem}[Topinky]
-Jakožto chudý student nemající dost peněz na topinkovač si smažíme topinky na pánvi. Opéci jednu stranu topinky trvá 2 minuty. Na pánev se vejdou současně nejvýš dva krajíce. Jak dlouho bude trvat opečení 3 krajíců chleba?
 \end{problem}
 
 \end{document}
