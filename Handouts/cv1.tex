@@ -53,14 +53,6 @@
 
 \section{Výroky}
 
-% Uvažujeme množinu států $A = \{ \text{Francie}, \text{Německo}, \text{Česko}, \text{Slovensko} \}$ a nechť $V(x,y)$ znamená, že stát $x$ vyváží víno do státu $y$. Vztah $V$ je znázorněn na diagramu níže.
-
-% \begin{wrapfigure}{r}{0.4\textwidth}
-%     \centering
-%     \includegraphics[width=2cm]{states.pdf}
-% \end{wrapfigure}
-% % \begin{problem}[Státy]
-
 \begin{minipage}{0.7\textwidth}
 V následujících příkladech uvažujeme množinu států: $$M = \{ \text{Francie}, \text{Německo}, \text{Česko}, \text{Slovensko} \}$$ a nechť $V(x,y)$ je zkratka pro výrok: „Stát $x$ vyváží víno do státu $y$.“. Vztah $V$ je znázorněn na diagramu vpravo.
 \end{minipage}%
@@ -89,6 +81,21 @@ Vyjádřete následující výroky slovy a následně určete, zda jsou pravdiv�
 
 \end{problem}
 
+\begin{problem}[Důkazy]
+O jisté množině států $E$ jsme zjistili, že splňujě:
+\begin{enumerate}
+    \item $\forall x \in E \ \forall y \in E: V(x,y) \Rightarrow \neg V(y,x)$
+    \item $\forall x \in E \ \forall y \in E \  \forall z \in E : V(x,y) \wedge V(y,z) \Rightarrow V(x,z)$
+\end{enumerate} 
+\begin{enumerate}[label=(\alph*)]
+    \item Zkuste formulovat podmínky vlastními slovy. Splňuje tyto podmínky i množina $M$ výše?
+    \item Dokažte, že v $E$ neexistuje stát, který vyváží víno sám sobě.
+    \item* Dokažte, že v $E$ neexistuje posloupnost států $x_0, \ldots , x_n$ t.ž. $V(x_0,x_1) \wedge V(x_1,x_2) \wedge \ldots \wedge  V(x_{n-1},x_n)$ kde $x_0 = x_n$.
+
+\end{enumerate}
+
+\end{problem}
+
 \section{Množiny}
 
 \begin{defn}
@@ -113,6 +120,16 @@ Jakožto chudý student nemající dost peněz na topinkovač si smažíme topin
 
 \begin{problem}[Rovnoramenná váha]
 Máme k dispozici rovnoramennou váhu a 9 mincí. Jedna z mincí je ovšem falešná, což se pozná tak, že je lehčí než ostatní mince, které váží všechny stejně. Na kolik nejméně vážení dokážeme zjistit, která z mincí je falešná?
+\end{problem}
+
+\begin{problem}[Hazard]
+V casinu ti nabídli následující hru: Nejprve zaplatíš 1 euro za vstup do hry. Dále je před tebe položeno 6 přihrádek, kde v každé leží jeden cent. Můžeš ve kterémkoliv tahu vyjmout obsah všech přihrádek, takto získanou částku si ponechat a odejít ze hry. Dále můžeš zahodit jeden cent z nějaké přihrádky a vložit dva centy do přihrády bezprostředně napravo od ní.
+
+\begin{enumerate}[label=(\alph*)]
+\item Vyplatí se ti přijmout nabídku a hrát?
+\item Máš k dispozici navíc akci: Zahodit cent z nějaké přihrádky a prohodit obsah dvou přihrádek bezprostředně vpravo od této přihrádky. Kolik peněz zvládneš vydělat nyní?
+\end{enumerate}
+
 \end{problem}
 
 \end{document}
