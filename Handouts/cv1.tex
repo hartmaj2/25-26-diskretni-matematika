@@ -10,6 +10,7 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{enumitem} % for a,b,c enums
+\usepackage{caption}
 
 %% metadata settings
 \newcommand{\tutnum}{0}
@@ -24,6 +25,8 @@
     \rule{\textwidth}{0.4pt}%
 }
 
+% remove default caption by czech babel
+\captionsetup[figure]{labelformat=empty}
 
 %% headers and footers settings
 \renewcommand{\headrulewidth}{0pt}
@@ -131,5 +134,29 @@ V casinu ti nabídli následující hru: Nejprve zaplatíš 1 euro za vstup do h
 \end{enumerate}
 
 \end{problem}
+
+\vspace{1cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{hazard_setup.pdf}
+    \caption{Počáteční rozložení přihrádek}
+\end{figure}
+
+\vspace{1cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=4cm]{hazard_rule_1.pdf}
+    \caption{Základní pravidlo}
+\end{figure}
+
+\vspace{1cm}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=6cm]{hazard_rule_2.pdf}
+    \caption{Pravidlo navíc}
+\end{figure}
 
 \end{document}
