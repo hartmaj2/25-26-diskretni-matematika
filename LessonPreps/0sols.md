@@ -116,17 +116,32 @@ Počítejme je následovně, nejprve spočítáme kolik jich může být potenci
 
 ### Příklad 6
 
-TODO:
+Dobré je si nejprve nakreslit diagram. Na diagramu uvidíme tři různé segmenty, ze kterých je možné výsledné množiny skládat — prvky pouze z $A$, prvky pouze z $B$ a prvky patřící zároveň do $A$ i do $B$.
+
+Žádný další segment už nemáme. Jemněji dělit ty množiny nedokážeme.
+
+Nějakou množinu pak vytvoříme jako libovolnou kombinaci libovolných ze tří segmenů. Jelikož každý segment buď můžeme využít nebo nevyužít, tak máme pro každý segment $2$ možnosti a tedy celkem $2^3 = 8$, možností.
 
 ## Hádanky
 
 ### Příklad 7
 
-TODO:
+Hladový přístup by byl, opéci nejprve obě topinky z obou stran za 4 minuty a pak za další 4 minuty opéct tu zbývající.
+
+To je ale neefektivní. Máme totiž celkem 6 stran topinek a kdybychom zvládli vždy opékat dvě strany zaráz, tak nám to bude trvat jen 6 minut.
+
+Nakreslíme si diagram topinek: topinka má dvě strany (volná políčka), které jsou potřeba opéci (vyplnit křížkem). Pravidlo je, že můžeme vždy přidat dva křížky a to nás stojí dvě minuty. Zároveň ale nesmíme zakřížkovat dvě strany topinky zároveň, jelikož nemáme skládací pánev.
 
 ### Příklad 8
 
-TODO:
+Zde je důležité si uvědomit, kolik může nastat situací, pokud vážíme obecné skupiny mincí $A,B,C$ kde $A$ a $B$ jsou skupiny po řadě na levém a pravém rameni váhy a $C$ je zbývající skupina čekající mimo váhu.
+
+Vážíme-li $A$ s $B$ tak výsledek může být: 
+1. $A$ je těžší
+2. $B$ je těžší
+3. $A$ a $B$ váží stejně.
+
+Dokážeme z těch tří výsledků vážení výše zjistit, v jaké skupině se nachází falešná mince, pokud jsme skupiny $A,B,C$ volili tak, aby byly stejně velké.
 
 ### Příklad 9
 
