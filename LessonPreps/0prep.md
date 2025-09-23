@@ -14,6 +14,7 @@
     - úkoly
       - mohou řešit společně
       - každý ale sepíše své řešení doma sám z hlavy
+    - body za aktivitu
   - k jaké přednášce se váže toto cvičení
   - doporučená literatura - Kapitolky
   - jak řešit příklady a sepisovat úlohy
@@ -21,18 +22,15 @@
 ## Informace ke cvičení
 
 - Kdo jsem já.
-- Moje webová stránka - bude napsaná dole na zadáních
 - Tykejme si.
+- Představení všech - Jméno a něco zajímavého o sobě
+- Moje webová stránka - bude napsaná dole na zadáních
 - Toto cvičení se váže k přednášce pana Pangráce (paralelka I1Y)
   - Je tedy dobré počítat s tím, že pokud chodí na jinou přednášku, tak můžeme být asynchronní
 - Doporučené studijní materiály:
   - Kapitoly z diskrétní matematiky
   - Přednášky od Martina Mareše
   - IPS (Introduction to Problem Solving)
-
-## Seznámení na úvod
-
-Každý řekne své jméno.
 
 ## Co je to matematika, co je to diskrétka?
 
