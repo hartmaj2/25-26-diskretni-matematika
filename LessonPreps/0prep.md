@@ -4,20 +4,11 @@
 
 - seznámení na úvod
 - co čekat od matfyzu? 
-  - není to lehká škola
   - jsou tu fajn lidi
   - učení se průběžně je dost potřeba
+  - není to lehká škola, ale zvládnou to
 - informace ke cvičení
-  - podmínky k zápočtu
-    - testíky
-      - malé 10 minutovky, nic vymýšlecího, spíš kontrola, zda chápou definice a orientují se
-    - úkoly
-      - mohou řešit společně
-      - každý ale sepíše své řešení doma sám z hlavy
-    - body za aktivitu
-  - k jaké přednášce se váže toto cvičení
-  - doporučená literatura - Kapitolky
-  - jak řešit příklady a sepisovat úlohy
+
 
 ## Informace ke cvičení
 
@@ -31,34 +22,49 @@
   - Kapitoly z diskrétní matematiky
   - Přednášky od Martina Mareše
   - IPS (Introduction to Problem Solving)
+- Podmínky k zápočtu
+  - testíky
+    - malé 10 minutovky, nic vymýšlecího, spíš kontrola, zda chápou definice a orientují se
+  - úkoly
+    - mohou řešit společně (ale doporučuji nejdříve zkusit sami)
+    - každý ale sepíše své řešení doma sám
+  - body za aktivitu
+    - 1 bod za prezentování u tabule
+- Jak sepisovat domácí úkoly
+  - budou se odevzdávat online do sovičky
+  - každý už dostal token pro přihlášení
+  - sepisovat 
+    - nejlépe sepsat v LaTeXu rovnou v sovičce (sovička umí preview a hned uvidí jak vypadá to, co zrovna píší)
+    - ČITELNĚ na papír a oskenovat mobilem (ne fotka!!!)
 
-## Co je to matematika, co je to diskrétka?
+## Co je to diskrétní matematika
 
-### Matematika
+- zabývá se objekty, které se od sebe dají oddělit, rozlišit a zkoumat pěkně jako jednotlivé části
 
-- diskrétní matematika - zabývá se nespojitými věcmi
-  - spojitá je například přímka
-  - diskrétní znamená, že jednotlivé části té věci od sebe můžeme oddělit (okolo každé části můžeme vyhradit plot, ve kterém už nikdo jiný nebude překážet)
-  - diskrétní je např. libovolná konečná množina
-    - nebo jakákoliv množina, která se dá namapovat na přirozená čísla
+- je to protipól matematiky spojité
+  - tou se zabývá např. matematická analýza (derivace, integrály atd.)
+  - typický spojitý objekt: přímka (tedy množina reálných čísel)
 
-- systém, jak dokazovat nějaká tvrzení (otázky, na které se dá odpovědět ano/ne)
-  - ta tvrzení jsou často velmi užitečná -> funguje díky nim například šifrování
-  - dokazujeme je, abychom měli jistotu, že fungují
+- příklady nespojitých objektů: 
+  - množina přirozených čísel
+  - grafy (to si mohou představit jako množinu nějakých bodů, které jsou propojeny čárkami, které reprezentují nějaký vzah mezi těmito body, např. sociální síť a lidé jsou spojeni, když jsou to přátelé)
 
-- k tomu, abychom mohli něco dokázat se musíme umět o těch věcech přesně bavit (jinak bychom důkazy po sobě nemohli kontrolovat)
-  - proto máme matematickou notaci -> logické symboly, kvantifikátory
-  - pomocí logických symbolů a proměnných pak například přesně dokážeme definovat nějakou množinu prvků, o které bychom chtěli mluvit
+- my se budeme zabývat tématy:
+  - důkaz indukcí, relace, funkce, grafy, kombinatorika, pravděpodobnost
 
-- proto si procvičíme notaci v prvním cvičení
-  - jak fungují výroky
-  - jak fungují kvantifikátory
+## Úvod do logiky, konkrétně výroků
 
-- důkaz
-  - posloupnost kroků, od jednoduchému tvrzení ke složitému
-  - máme většinou nějaké předpoklady a z nich se snažíme dokázat něco složitějšího 
-  - důkaz přímí, sporem, idukcí atd.
+- proč děláme úvod do logiky?
+  - celá matematika totiž stojí na tvrzeních a určování toho, zda tvrzení platí či neplatí (to děláme pomocí důkazů)
+  - chceme tedy tyto základní kameny matematiky znát
 
-- proto si procvičíme důkazy na cvičení s důkazy
+- co je to výrok?
 
+- jak můžeme kombinovat výroky - logické spojky (konjunkce, disjunkce, implikace, ekvivalence, ostrá disjunkce XOR, negace)
+  - tolik jich máme pro jedoduchost (stačila by i jen například znegovaná konjunkce $\uparrow$)
 
+- další značení (které v určitých případech dokonce i potřebujeme) - kvantifikátory
+  - umožní nám vyjádřit, o kolika objektech mluvíme (o jednom nebo o všech)
+  - ty bychom vlastně nepotřebovali pokud se omezíme na KONEČNÉ množiny
+
+## Jdeme řešit
