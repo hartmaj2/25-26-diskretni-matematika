@@ -1,7 +1,7 @@
 # Points awarded
 
 Maximum 160 points
-100 points needed for passing the tutorial
+100 points needed for passing
 80 needed to be eligible for additional homework
 
 ## Tests
