@@ -2,7 +2,11 @@
 
 ## Hlavní náplň
 
+- kde jsou teď
 - seznámení na úvod
+  - já
+  - tykání
+  - oni
 - co čekat od matfyzu? 
   - jsou tu fajn lidi
   - učení se průběžně je dost potřeba
