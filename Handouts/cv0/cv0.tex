@@ -93,17 +93,21 @@ O jisté množině států $E$ jsme zjistili, že splňujě:
 \begin{enumerate}
     \item $\forall x \in E \ \forall y \in E: V(x,y) \Rightarrow \neg V(y,x)$
     \item $\forall x \in E \ \forall y \in E \  \forall z \in E : V(x,y) \wedge V(y,z) \Rightarrow V(x,z)$
+    % NOTE: Zeptat se a ukázat, co znamená tato tranzitivní podmínka obrázkově.
 \end{enumerate} 
 \begin{enumerate}[label=(\alph*)]
     \item Zkuste formulovat podmínky vlastními slovy. Splňuje tyto podmínky i množina $M$ zmíněná výše?
-    \item Dokažte, že v $E$ neexistuje stát, který vyváží víno sám sobě.
+    \item Dokažte, že v $E$ neexistuje stát, který vyváží víno sám sobě. 
+    % NOTE: Tady jsem se trochu zamotal při vysvětlování. Proč když dosadím za oba kvantifikátory ten samý prvek, tak tabulkou hned vidím, že vyjde 0.
     \item* Dokažte, že v $E$ neexistuje posloupnost států $x_0, \ldots , x_n$ t.ž. $V(x_0,x_1) \wedge V(x_1,x_2) \wedge \ldots \wedge  V(x_{n-1},x_n)$ kde $x_0 = x_n$.
+    % NOTE: Nejprve se zeptat, co znamená taková posloupnost obrázkově.
 
 \end{enumerate}
 
 \end{problem}
 
 \section{Množiny}
+% NOTE: Před řešením těchto příkladů nezapomenout zmínit Vennovy diagramy!
 
 \begin{defn}
     Symetrický rozdíl $A \bigtriangleup B$ definujeme jako množinu prvků, které jsou buď v $A$, anebo v $B$ (ale ne v $A$ i $B$ zároveň).
@@ -115,6 +119,7 @@ Zapište množinu $A \bigtriangleup B$ pomocí množinových operací $\cup, \ca
 
 \begin{problem}[Dvouprvkové podmnožiny]
 Mějme libovolnou množinu $K$. Uvažme všechny její podmnožiny obsahující právě dva prvky. Jaké množiny jsme z nich schopni vytvořit pomocí operace $\bigtriangleup$? Jsme takto schopni zkonstruovat libovolnou podmnožinu množiny $K$?
+% NOTE: Zde nebylo studentům jasné zadání. Bylo by dobré nejprve ukázat konkrétní příklad např. pro čtyřprvkovou množinu.
 \end{problem}
 
 \begin{problem}[Operace na množinách]
