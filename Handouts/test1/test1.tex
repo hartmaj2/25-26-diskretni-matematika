@@ -25,7 +25,7 @@
 \newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
 \newcommand{\titlerule}{%
     \noindent %
-    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{3cm}}
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
     \rule{\textwidth}{0.4pt}%
 }
 
@@ -37,7 +37,7 @@
 % \fancyhead[L]{\thetitle}   % left -> title
 % \fancyhead[C]{} % center -> unused
 % \fancyhead[R]{\thedate}  % right -> date
-\fancyfoot[C]{\small Nezapomeňte uvádět postup!}  
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
 
 
 % theorem styles
@@ -55,12 +55,22 @@
 
 \titlerule
 
-\begin{problem}[5 bodů]
+\begin{problem}[4 body]
 Zjednodušte výraz $A \setminus ( B \setminus ( A \setminus ( B \setminus ( A \setminus ( B \setminus A )))))$ na tvar, ve kterém se symboly $A$, $B$ a $\setminus$ vyskytují nejvýše jednou.
 \end{problem}
 
-\begin{problem}[5 bodů]
-Zjednodušte výraz $((p \wedge q) \vee (\neg p \wedge q) ) \vee ( (p \wedge \neg q) \vee (p \wedge q)  )$ na tvar, ve kterém se symboly $p,q,\neg,\wedge,\vee$ vyskytují nejvýše jednou.
+\begin{problem}[6 bodů]
+Mějme následující tvrzení:
+\begin{enumerate}[label=\Roman*.]
+    \item $\forall x \in A \ \exists y \in A : S(x,y)$
+    \item $\forall x \in A \ \forall y \in A : S(x,y) \Rightarrow \neg S(y,x)$
+\end{enumerate}
+Symbol $S(x,y)$ interpretujte jako \textit{„z prvku $x$ vede šipka do prvku $y$“}
+\begin{enumerate}[label=(\alph*)]
+    \item Nakreslete diagram množiny $A=\{1,2,3,4\}$, která tvrzení I a II splňuje.
+    \item Nakreslete diagram množiny $B=\{5,6,7,8\}$, která nesplňuje tvrzení I ani II.
+\end{enumerate}
+
 \end{problem}
 
 \end{document}
