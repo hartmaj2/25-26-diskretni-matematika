@@ -3,18 +3,8 @@
 
 % Preamble
 \usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
-\usepackage{titling}
-\usepackage{fancyhdr}
-\usepackage[hidelinks]{hyperref}
-\usepackage[czech]{babel}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{enumitem} % for a,b,c enums
-\usepackage{caption}
 
-% FONT SPEC (for XeLaTeX) TO MAKE TROJA PRINTER WORK
-\usepackage{fontspec}
-\usepackage{unicode-math}
+\usepackage{../../tutorial}
 
 %% metadata settings
 \newcommand{\tutnum}{1}
@@ -39,16 +29,6 @@
 % \fancyhead[R]{\thedate}  % right -> date
 \fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
 
-
-% theorem styles
-\newtheoremstyle{definitionstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.}{ }{\thmname{#1}}
-\newtheoremstyle{problemstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.\newline}{ }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
-
-% theorems
-\theoremstyle{definitionstyle}
-\newtheorem{defn}{Definice}
-\theoremstyle{problemstyle}
-\newtheorem{problem}{Příklad}
 
 % Document body
 \begin{document}

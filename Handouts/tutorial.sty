@@ -1,0 +1,34 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{tutorial}[2025/10/04 v1.0 Common preamble for discrete math tutorials]
+
+
+% ========================
+% --- General packages ---
+% ========================
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage[czech]{babel}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem} % for a,b,c enums
+\usepackage{caption}
+
+% FONT SPEC (for XeLaTeX) TO MAKE TROJA PRINTER WORK
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+
+% ===============================
+% --- Theorem styles & envs ---
+% ===============================
+
+% theorem styles
+\newtheoremstyle{definitionstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.}{ }{\thmname{#1}}
+\newtheoremstyle{problemstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.\newline}{ }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+
+% theorems
+\theoremstyle{definitionstyle}
+\newtheorem{defn}{Definice}
+\theoremstyle{problemstyle}
+\newtheorem{problem}{Příklad}
