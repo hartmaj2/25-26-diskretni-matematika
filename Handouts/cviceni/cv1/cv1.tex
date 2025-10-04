@@ -35,7 +35,31 @@
 
 \titlerule
 
+\begin{defn}
+    Píšeme $n \ | \ m$ když existuje přirozené číslo $k$ takové, že $n \cdot k = m$.
+\end{defn}
+
+\begin{defn}
+    Definujeme Fibonacciho posloupnost jako $F_0 = 0$, $F_1 = 1$ a pro každé $i \geq 2 : F_i = F_{i-1} + F_{i-2}$.
+\end{defn}
+
 \section{Důkazy}
+
+\begin{problem}[Suma mocnin dvojky]
+Dokažte, že pro každé $n \geq 0$ platí $\sum_{i=0}^{n}2^i = 2^{n+1} - 1$.
+\end{problem}
+
+\begin{problem}[Dělitelnost]
+Indukcí dokažte, že pro každé $n \geq 0$ platí $4 \ | \ (6n^2 + 2n)$.
+\end{problem}
+
+\begin{problem}[Šachovnice]
+Mějme šachovnici o rozměru $2^n \times 2^n$, ve které chybí právě jedno libovolné políčko. Dokažte, že lze zcela pokrýt kostičkami tvaru písmene L (zabírají tři políčka).
+\end{problem}
+
+\begin{problem}[Teleskopický součin]
+Dokažte, že $\prod_{i=1}^{n}\frac{i+1}{i} = n + 1$ pro každé $n \geq 1$.
+\end{problem}
 
 \begin{problem}[Neexistence cyklů]
 O jisté množině států $E$ jsme zjistili, že splňujě:
@@ -43,11 +67,7 @@ O jisté množině států $E$ jsme zjistili, že splňujě:
     \item $\forall x \in E \ \forall y \in E: V(x,y) \Rightarrow \neg V(y,x)$
     \item $\forall x \in E \ \forall y \in E \  \forall z \in E : V(x,y) \wedge V(y,z) \Rightarrow V(x,z)$
 \end{enumerate} 
-\begin{enumerate}[label=(\alph*)]
-    \item Znázorněte pomocí bodů a šipek, co říká podmínka číslo 2.
-    \item Dokažte, že v $E$ neexistuje posloupnost států $x_0, \ldots , x_n$ t.ž. $V(x_0,x_1) \wedge V(x_1,x_2) \wedge \ldots \wedge  V(x_{n-1},x_n)$ kde $x_0 = x_n$.
-
-\end{enumerate}
+Dokažte, že v $E$ neexistuje posloupnost států $x_0, \ldots , x_n$ t.ž. $V(x_0,x_1) \wedge V(x_1,x_2) \wedge \ldots \wedge  V(x_{n-1},x_n)$ kde $x_0 = x_n$.
 \end{problem}
 
 \section{Hádanky}
