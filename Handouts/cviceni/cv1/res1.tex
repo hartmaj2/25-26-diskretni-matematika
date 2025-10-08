@@ -1,0 +1,146 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+%% metadata settings
+\newcommand{\tutnum}{1}
+\title{Řešení příkladů z \tutnum. cvika diskrétní matematiky}
+\author{Jan Hartman}
+\date{6.10.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \vspace{5pt}
+\noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{defn}
+    Říkáme, že číslo $n$ dělí číslo $m$ beze zbytku a píšeme $n \ | \ m$, když existuje celé číslo $k$ takové, že $n \cdot k = m$.
+\end{defn}
+
+\section{Důkazy}
+
+\begin{problem}[Suma mocnin dvojky]
+Dokažte, že pro každé $n \geq 0$ platí $\sum_{i=0}^{n}2^i = 2^{n+1} - 1$.
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Nejprve ukážeme, že výrok platí pro $n=0$. Máme tedy na levé straně rovnosti $\sum_{i=0}^{0}2^i=2^0=1$. Na pravé straně $2^{(0+1)}-1=2-1=1$ a obě strany se tedy rovnají.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{V indukčním kroku budeme předpokládat, že výrok platí pro nějaké $m$. Tedy že pro $m$ platí rovnost $\sum_{i=0}^{m}2^i = 2^{m+1} - 1$. Nyní chceme ukázat, že výrok platí i pro následující člen, tedy pro $m+1$. Konkrétně chceme ukázat, že $\sum_{i=0}^{m+1}2^i = 2^{m+2} - 1$. Jak toho docílíme?}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Koukneme se, jak vypadá levá strana rovnice výše. Sumu $\sum_{i=0}^{m+1}2^i$ je možné rozepsat jako výraz $\overbrace{2^0 + 2^1 + \ldots + 2^m}^{\sum_{i=0}^{m}2^i} + 2^{m+1}$ a díkdy předpokladu víme, že platí rovnost $\sum_{i=0}^{m}2^i = 2^{m+1} - 1$ a tedy máme $\overbrace{2^0 + 2^1 + \ldots + 2^m}^{2^{m+1}-1} + 2^{m+1} = 2^{m+1} + 2^{m+1} - 1 = 2 \cdot 2^{m+1} - 1 = 2^{m+2} -1$, což jsme chtěli dokázat.}
+\end{problem}
+
+\begin{problem}[Dělitelnost]
+Indukcí dokažte, že pro každé $n \geq 0$ platí $4 \ | \ (6n^2 + 2n)$.
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Nejprve si uvědomíme, že $4 \ | \ (6n^2 + 2n)$ je ekvivalentný výroku $\exists k \in \mathbb{Z} : 4 k = 6n^2 + 2n$.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Pro $n=0$ máme $4 \ | \ (6 \cdot 0^2 + 2 \cdot 0)$ tedy $ 4 \ | \ 0$ což platí, jelikož za hledané $k$ můžeme zvolit $0$ a platí, že $4 \cdot 0 = 0$. (Z toho je vidět i obecnější pozorování, že nulu dělí cokoliv.)}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Nyní přichází na řadu indukční krok. Indukčním předpokladem pro nás bude, že pro nějaké $m$ platí, že: $4 \ | \ (6m^2 + 2m)$. Tedy víme, že existuje $l$ takové, že $4 l = 6m^2 + 2m$.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Naším cílem bude ukázat, že $ 4 \ | \ (6(m+1)^2 + 2(m+1))$. Jinými slovy hledáme $d$ takové, že $(6(m+1)^2 + 2(m+1)) = 4 d$. Rozepíšeme si tedy levou stranu rovnice na tvar $6m^2 + 12m + 6 + 2m + 2 = 6m^2 + 2m + 12m + 8$. Díky předpokladu máme $\overbrace{6m^2 + 2m}^{4l} + 12m + 8=4l + 4(3m) + 4 \cdot 2=4(l + 3m + 2)$. Našli jsme tedy $d=l+3m+2$ takové, že $4d = (6(m+1)^2 + 2(m+1))$, což jsme chtěli dokázat.}
+\end{problem}
+
+
+
+\begin{problem}[Šachovnice]
+Mějme šachovnici o rozměru $2^n \times 2^n$, ve které chybí jedno libovolné políčko. Dokažte, že ji lze zcela pokrýt kostičkami tvaru písmene \textbf{L} (zabírající tři políčka).
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Rukou psaný důkaz na poslední stránce dokumentu.}
+
+\end{problem}
+
+\begin{problem}[Sudé $\times$ liché]
+Dokažte, že pro každou neprázdnou $n$-prvkovou množinu platí, že počet všech jejích podmnožin sudé velikosti se rovná počtu všech jejích podmnožin liché velikosti. 
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Pro přehlednost si označme $l_n$ počet lichých podmnožin libovolné $n$-prvkové množiny. Podobně označme $s_n$ počet sudých podmnožin. (Píši zkrácené „lichá podmnožina“ a myslím tím „podmnožina s lichým počtem prvků“.)}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Dobré je si uvědomit, že pro libovolné dvě $n$-prvkové množiny bude $l_n$ stejné číslo. Tedy nezáleží, jestli množina obsahuje $n$ čísel nebo $n$ jablíček. Záleží čistě na počtu prvků. Stejný argument platí i pro $s_n$.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Jelikož uvažujeme pouze neprázdné množiny, tak nutně $n \geq 1$. V základním kroku tedy máme jednoprvkovou množinu $\{x\}$ a jediné její podmnožiny jsou $\{x\}$ a $\{\} = \emptyset$. Tedy $l_1 = 1 = s_1$.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{V indukčním kroku budeme předpokládat, že pro nějaké $m$ platí, že libovolná $m$-prvková množina splňuje, že $l_m = s_m$. Chceme ukázat, že za tohoto předpokladu bude platit také $l_{m+1} = s_{m+1}$.}
+
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Uvažme tedy libovolnou $(m+1)$-prvkovou množinu $M = \{ x_1, x_2, \ldots , x_m, x_{m+1}\}$ (tedy pro $i \neq j$ máme $x_i \neq x_j$).}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Rozdělíme si podmnožiny na dvě skupiny dle toho, zda do nich náleží $x_{m+1}$, či nikoliv. Nejprve spočtěme, kolik má $(m+1)$-prvková množina lichých podmnožin neobsahujících prvek $x_{m+1}$. Tento počet odpovídá číslu $l_m$, jelikož všechny liché podmnožiny množiny $\{x_1,\ldots,x_m\}$ jistě neobsahují prvek $x_{m+1}$ a zároveň jsou i podmnožinami množiny $M$.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Nyní však musíme ještě započítat všechny liché podmnožiny, které prvek $x_{m+1}$ naopak obsahují. Takové množiny lze získat jako sudé podmnožiny $\{x_0,\ldots,x_m\}$, ke kterým přidáme prvek $x_{m+1}$, čímž vznikne lichá podmnožina množiny $M$. Tento počet tedy odpovídá $s_m$.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Jelikož všechny liché podmnožiny množiny $M$ buď obsahují prvek $x_{m+1}$, nebo ho neobsahují (žádná jiná možnost už není), tak jsme jistě započítali všechny liché podmnožiny množiny $M$ a jejich počet je $l_m + s_m$. Můžeme tedy slavnostně prohlásit, že $l_{m+1} = l_m + s_m$.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Cvičení: Ukažte, že podobným argumentem lze odvodit, že $s_{m+1} = s_m + l_m$. Z toho pak plyne $s_{m+1} = l_{m+1}$, což jsme chtěli dokázat.}
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{}
+
+\end{problem}
+
+\begin{problem}[Teleskopický součin]
+Dokažte, že platí $\prod_{i=1}^{n}\frac{i+1}{i} = n + 1$ pro každé $n \geq 1$.
+
+\vspace{5pt}
+\noindent
+\textcolor{red}{Stejný princip jako příklad 1, akorát místo sumy máme produkt. Tedy máme $\prod_{i=1}^{n} = \frac{2}{1} \cdot \frac{3}{2} \cdot \ldots \cdot \frac{n}{n-1} \cdot \frac{n+1}{n}$.}
+\end{problem}
+
+\end{document}
