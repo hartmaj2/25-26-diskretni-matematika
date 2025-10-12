@@ -3,18 +3,8 @@
 
 % Preamble
 \usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
-\usepackage{titling}
-\usepackage{fancyhdr}
-\usepackage[hidelinks]{hyperref}
-\usepackage[czech]{babel}
-\usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{enumitem} % for a,b,c enums
-\usepackage{caption}
 
-% FONT SPEC (for XeLaTeX) TO MAKE TROJA PRINTER WORK
-\usepackage{fontspec}
-\usepackage{unicode-math}
+\usepackage{../../tutorial}
 
 
 %% metadata settings
@@ -40,16 +30,6 @@
 \fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
 
 
-% theorem styles
-\newtheoremstyle{definitionstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.}{ }{\thmname{#1}}
-\newtheoremstyle{problemstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{:}{ }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
-
-% theorems
-\theoremstyle{definitionstyle}
-\newtheorem{defn}{Definice}
-\theoremstyle{problemstyle}
-\newtheorem{problem}{Příklad}
-
 % Document body
 \begin{document}
 
@@ -61,7 +41,7 @@ Dokažte indukcí, že pro každé $n \geq 1$ platí $\sum_{i=1}^{n}(2i-1) = n^2
 
 \begin{problem}[6 bodů]
 
-Dokaže indukcí, že pro každé liché $n \geq 1$ platí $8 \ | \ (n^2 - 1)$. Tedy pro, každé $n \in \{1,3,5,7,\ldots\}$. \textit{Hint: Pro sudá čísla by to neplatilo.}
+Dokaže indukcí, že pro každé liché $n \geq 1$ platí $8 \ | \ (n^2 - 1)$. Jinými slovy pro každé $n \in \{1,3,5,7,\ldots\}$. \textit{Hint: Když si už nebudete vědět rady, využijte definici lichosti.}
 
 \end{problem}
 
