@@ -1,0 +1,48 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+
+%% metadata settings
+\newcommand{\tutnum}{3}
+\title{\tutnum. písemka z diskrétní matematiky}
+\author{Jan Hartman}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[5 bodů]
+Nechť $R=\{(1,2),(1,4),(2,1),(4,4)\}$ je relace na množině $X=\{1,2,3,4\}$. Určete relaci $R \circ R$ a rozhodněte, zda je symetrická.
+\end{problem}
+
+\begin{problem}[5 bodů]
+
+Kolik existuje různých reflexivních relací na množině \{1,2,3\}. \textit{Pokud toto číslo nezvládnete určit, určete alespoň kolik na této množině existuje všech možných relací (bez podmínky reflexivity).}
+
+\end{problem}
+
+\end{document}
