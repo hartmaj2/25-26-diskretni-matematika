@@ -1,0 +1,46 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+
+%% metadata settings
+\newcommand{\tutnum}{4}
+\title{\tutnum. písemka z diskrétní matematiky}
+\author{Jan Hartman}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[4 body]
+Napište definice minimálního a nejmenšího prvku vzhledem k uspořádání $\preceq$ na množině $X$. Dbejte na správnou matematickou notaci.
+
+\end{problem}
+
+\begin{problem}[6 bodů]
+Nechť $R$ je relace na množině $\mathbb{Z}$ t.ž. $aRb$ právě tehdy když $|a-b| \leq 1$. Určete, které z vlastností reflexivita, symetrie, antisymetrie a tranzitivita tato relace splňuje. Dle vašeho výsledku určete, zda se jedná o ekvivalenci, uspořádání, či ani jedno.
+\end{problem}
+\end{document}
