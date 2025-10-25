@@ -1,0 +1,107 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{4}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{27.10.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[Počty funkcí]
+Kolik existuje funkcí z $\{1,2,\ldots,a\}$ do $\{1,2,\ldots,b\}$?
+\begin{enumerate}[label=\alph*)]
+    \item všech
+    \item prostých
+    \item bijekcí
+    \item \textit{na} pro $a = 4$ a $b=3$ 
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Staří známí]
+Kolika způsoby lze z $n$ rozlišitelných kuliček vybrat uspořádanou $k$-tici? A kolika neuspořádanou? Co když jsou kuličky nerozlišitelné?
+\end{problem}
+
+\begin{problem}[Uvažujeme kombinatoricky]
+Dokažte kombinatorickou úvahou:
+\begin{enumerate}[label=\alph*)]
+    \item $\binom{n}{k} = \binom{n}{n-k}$
+    \item $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$
+    \item $\sum_{k=0}^{n}\binom{n}{k} = 2^n$
+    \item $\sum_{k=0}^{n}(-1)^k\binom{n}{k} = 0$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Rozlož a spočítej]
+Kolik existuje různých ekvivalencí na čtyřech prvcích? A kolik na $n$ prvcích? Stačí najít rekurentní vzorec.
+\end{problem}
+
+\begin{problem}[Kuličky a přihrádky]
+Kolik existuje možností, jak rozmístit $n$ nerozlišitelných kuliček do $k$ rozlišitelných přihrádek? Co když žádná přihrádka nesmí být prázdná? Co když jsou kuličky rozlišitelné?
+\end{problem}
+
+\begin{problem}[Klasifikace]
+Z $n$ předmětů vybíráme $k$ předmětů. Do následující tabulky napište počty možných výběrů: \\
+\textit{Hint: Zkuste použít řešení příkladů výše.}
+
+\vspace{5pt}
+\begin{tabular}{|c|c|c|}
+\hline
+    Výběry & Záleží na pořadí (variace) & Nezáleží na pořadí (kombinace) \\
+\hline
+    Bez opakování &  &  \\
+\hline
+    S opakováním &  &  \\
+\hline
+\end{tabular}
+
+\end{problem}
+
+\begin{problem}[Sestavme si vládu]
+Kombinatorickou úvahou vyjádřete výraz $\sum_{k=1}^{n}k\binom{n}{k}$ bez použití sumy.
+\end{problem}
+
+\begin{problem}[Šach mat]
+Kolika způsoby lze rozestavit bílého a černého krále na šachovnici tak, aby nestáli na stejném políčku? A kolika způsoby tak, aby se neohrožovali?
+\end{problem}
+
+\begin{problem}[Umět si vybrat]
+Kolika způsoby lze vybrat množiny $A,B \subseteq [n]$ takové, že:
+\begin{enumerate}[label=\alph*)]
+    \item $A \subseteq B$
+    \item $A = \{x\}$ a $x \in B$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Sportem ku zdraví]
+Na hřišti se $12$ kamarádů rozhodlo zahrát si volejbal. Jeden z nich však v průběhu dne musel odejít dodělávat úkoly z diskrétní matematiky. Jak se změní počet způsobů rozdělení do dvou týmů z původních $6$ vs $6$ na výsledných $6$ vs $5$. Bude takový počet poloviční, výrazně menší, nebo dokonce stejný?
+\end{problem}
+
+\end{document}
