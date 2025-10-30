@@ -1,0 +1,48 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+
+%% metadata settings
+\newcommand{\tutnum}{5}
+\title{\tutnum. písemka z diskrétní matematiky}
+\author{Jan Hartman}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[10 bodů]
+Kolik různých řetězců délky 10 z písmen z abecedy $\{a,b,c,d,e,f,g,h\}$ dokážeme sestavit:
+\begin{enumerate}[label=\alph*)]
+    \item všech možných
+    \item takových, že obsahují písmeno $a$ právě čtyřikrát
+    \item obsahujících písmeno $a$ právě čtyřikrát a písmeno $b$ právě dvakrát
+    \item obsahujících písmeno $a$ právě čtyřikrát, písmeno $b$ právě dvakrát a ostatní písmena nejvýše jednou
+\end{enumerate}
+\end{problem}
+
+\end{document}
