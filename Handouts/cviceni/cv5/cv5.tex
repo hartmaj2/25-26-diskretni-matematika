@@ -1,0 +1,100 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{5}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{3.11.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[Spam filtr]
+Uživatel Pavel obdržel $77$ mailů. Jeho spam filtr hodí mail do spamu, pokud splní alespoň jedno z pravidel:
+\begin{enumerate}
+    \item obsahuje slovo „zdarma“,
+    \item obsahuje alespoň tři odkazy.
+    \item obsahuje obrázek koťátka,
+\end{enumerate}
+Víte, že slovo „zdarma“ obsahuje 18 mailů, alespoň tři odkazy obsahuje 20 mailů a fotku koťátka má 42 mailů. Tři odkazy a zároveň slovo „zdarma“ obsahuje 14 mailů. Žádný mail neobsahuje jak fotku koťátka, tak i slovo „zdarma“. Tři odkazy a zároveň i koťátko obsahuje 12 mailů. 
+
+\vspace{5pt}
+\noindent
+Kolik mailů prošlo spam filtrem?
+\end{problem}
+
+\begin{problem}[Počty surjekcí]
+Kolik existuje funkcí \textit{na} z $\{1,2,3,4\}$ do $\{1,2,3\}$? Kolik je to obecně pro funkce z $[n]$ do $[m]$?
+\end{problem}
+
+\begin{problem}[Bojovníci]
+Vojevůdce Karel se rozhodl naverbovat nové bojovníky do svého vojska v přilehlé vesnici. Každý z 80ti zájemců ovládá aspoň jednu z dovedností: boj s mečem, střelba z luku nebo jízda na koni. Dokonce 15 z nich umí všechny tři dovednosti. Dále se dozvěděl, že šermovat jich umí 50 a stejný počet umí střílet z luku. Jezdit na koni jich umí 45.
+
+\vspace{5pt}
+\noindent
+Karel přijme do vojska pouze takové bojovníky, kteří ovládají právě dvě dovednosti. Ti co umí jen jednu se mu nehodí a ti co umí všechny tři si nárokují příliš vysoký žold. Kolik bojovníků Karel najme?
+\end{problem}
+
+\begin{problem}[Eratostenovo síto]
+Kolik zbyde z čísel $1,2,\ldots,n$ po vyškrtání všech násobků $2$,$3$ a $5$?
+\end{problem}
+
+\begin{problem}[Umět si vybrat]
+Kolika způsoby lze vybrat množiny $A,B \subseteq [n]$ takové, že:
+\begin{enumerate}[label=\alph*)]
+    \item $A \subseteq B$
+    \item $A = \{x\}$ a $x \in B$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Binomická věta]
+Vyzkoušejte si binomickou větu na následujících příkladech. Pokaždé vznikne zajímavá identita s kombinačními čísly:
+\begin{enumerate}[label=\alph*)]
+    \item $(1+1)^n$
+    \item $(1-1)^n$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Kameny na šachovnici]
+Kolika způsoby lze umístit osm kamenů na šachovnici $4\times4$ tak, aby se na šachovnici vyskytovaly čtyři kameny ve stejném řádku nebo stejném sloupci?
+\end{problem}
+
+\begin{problem}[Vánoční večírek]
+Na Vánoční večírek přišlo $n$ lidí a každý přinesl jeden dárek. Kolik existuje možností rozdělení dárků mezi účastníky takových, že žádný účastník nedostane svůj vlastní dárek.
+\end{problem}
+
+\begin{problem}[Rozlož a spočítej vol. 2]
+Kolik existuje různých ekvivalencí na $n$ prvcích? Stačí najít rekurentní vzorec.
+\end{problem}
+
+\begin{problem}[Hokejková suma]
+Dokažte kombinatorickou úvahou, že platí $\sum_{k=r}^{n}\binom{k}{r} = \binom{n+1}{r+1}$.
+\end{problem}
+
+\end{document}
