@@ -1,0 +1,119 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{4}
+\title{řešení příkladů z \tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{27.10.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[Počty funkcí]
+Kolik existuje funkcí z $\{1,2,\ldots,a\}$ do $\{1,2,\ldots,b\}$?
+\begin{enumerate}[label=\alph*)]
+    \item všech
+    
+    \solution{Představíme si, že funkci postupně vytváříme od prvku $1$ až do prvku $a$. Pro každý prvek máme celkem $b$ možností, kam ho zobrazit a toto provádíme $a$-krát. Tedy možností je celkem $\overbrace{b \cdot b \cdot \ldots \cdot b}^{\text{$a$-krát}}=b^a$}
+    \item prostých
+    
+    \solution{Podobná situace, jako výše. Zobrazujeme-li však prvek $2$, tak už ho nemůžeme zobrazit na tentýž prvek, na který se zobrazil prvek $1$. Máme tedy už jen $(b-1)$ možností, kam ho zobrazit. Obecně máme $(b-i+1)$ možností, kam zobrazit $i$-tý prvek. Celkem $\overbrace{b \cdot (b-1) \cdot \ldots \cdot (b-a+1)}^{\text{$a$-krát}}=\frac{b!}{(b-a)!}=b^{\underline{a}}$ možností. Důležitá je podmínka $a \leq b$, jelikož jinak neexistuje žádná prostá funkce z $a$ do $b$.}
+    \item bijekcí
+    
+    \solution{Téměr stejná situace, jako u prostých funkcí. Nyní dokonce musí $a=b$, jinak by bijekce nemohla existovat. Dále využijeme toho, že pokud máme prostou funkci mezi stejně mohutnými množinami, tak už se musí nutně jednat o bijekci. Stačí tedy použít vzorec výše pro prosté funkce a dosadit $a=b$ čímž získáme počet možností $a!=b!$.}
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Staří známí]
+Kolika způsoby lze z $n$ rozlišitelných kuliček vybrat uspořádanou $k$-tici? A kolika neuspořádanou? Co když jsou kuličky nerozlišitelné?
+
+\solution{Znovu postupujeme vytvářením uspořádané trojice. Budeme postupovat po jednotlivých pozicích. Na první pozici můžeme umístit $n$ kuliček, na druhou $n-1$ kuliček a tak dále. Máme tedy $\frac{n!}{(n-k)!}$ možností. Všimněme si nyní, že vlastně počítáme všechna možná \textbf{prostá} zobrazení jednotlivých pozic $\{1,\ldots,k\}$ na kuličky $\{1,\ldots,n\}$. Jde o zobrazení, nikoliv o jen tak ledajakou relaci, jelikož každé pozici musíme přiřadit vždy právě jednu kuličku. Prosté musí být z toho důvodu, že dvěma pozicím nemůžeme přiřadit stejnou kuličku. (Kulička se nachází vždy na nejvýše jedné pozici, nikoliv v superpozici.)}
+
+\solution{Pokud vybíráme neuspořádanou $k$-tici, tak vlastně vybíráme nějakou podmnožinu. Podmnožině totiž také nezáleží na pořadí, což je pro nás nyní chtěná vlastnost. Hledané číslo tedy přímo odpovídá číslu $\binom{n}{k}$. Také si můžeme představit, že spočítáme nejprve všechny uspořádané $k$-tice a následně si všimneme, že každá neuspořádaná $k$-tice má přesně $k!$ způsobů, jak ji můžeme uspořádat. Číslo $\frac{n!}{(n-k)!}$ tedy každou z našich neuspořádaných $k$-tic započetlo právě $k!$ krát. Abychom tedy získali počet všech neuspořádaných $k$-tic, tak číslo $\frac{n!}{(n-k)!}$ podělíme číslem $k!$ a máme vyhráno.}. 
+
+\solution{Pokud jsou kuličky nerozlišitelné, tak máme vždy jen jeden jediný způsob, jak si vybrat $k$-tici. Kdybychom vybrali jiných $k$ kuliček, tak stejně nepoznáme rozdíl.}
+\end{problem}
+
+\begin{problem}[Uvažujeme kombinatoricky]
+Dokažte kombinatorickou úvahou:
+\begin{enumerate}[label=\alph*)]
+    \item $\binom{n}{k} = \binom{n}{n-k}$
+    
+    \solution{Ukážeme, že levá strana rovnice počítá objekty, které jednoznačně odpovídají objektům, které počítá číslo na pravé straně. Mějme tedy množinu $N=\{1,\ldots,n\}$ z níž vybíráme $k$ prvkové podmnožiny. Když levá strana rovnice započítá množinu $A=\{x_1, \ldots, x_k\}$, tak to přesně odpovídá případu, kdy pravá strana rovnice započítá množinu $N \setminus A$. Všimněme si, že všechny množiny typu $N \setminus A$ obsahují právě $n-k$ prvků. Mohli bychom si tedy představit, že namísto počítání všech $k$ prvkových podmnožin počítáme všechny jejich možné doplňky. Ty mají tedy vždy $n-k$ prvků a bude jich přesně $\binom{n}{n-k}$.}
+    \item $\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$
+    
+    \solution{Levá strana počítá rovnou všechny $k$ prvkové podmnožiny nějaké $n$ prvkové množiny. Řekněme, že tato množina je $N=\{1,\ldots,n\}$. Co počítá strana pravá? Zafixujme si nějaký prvek $x \in N$. Nejprve spočítáme všechny $k$ prvkové podmnožiny, které prvek $x$ obsahují. Těch je přesně $\binom{n-1}{k-1}$ jelikož odpovídají všem způsobům, jak k prvku $x$ dovybrat zbylých $k-1$ prvků ze zbylých $n-1$ prvků. Nyní pojďme spočítat všechny $k$ prvkové podmnožiny, které neobsahují prvek $x$. Jelikož nechceme vybrat $x$, tak máme už jen $n-1$ možností a musíme vybrat $k$ prvků. Výsledný počet tedy odpovídá číslu $\binom{n-1}{k}$.}
+    \item $\sum_{k=0}^{n}\binom{n}{k} = 2^n$
+    
+    \solution{Suma na levé straně počítá postupně všechny $0$-prvkové podmnožiny, $1$-prvkové, $2$-prvkové a tak dále až do $n$. Ve finále tedy spočítá počet všech možných podmnožin nějaké $n$-prvkové množiny. A tomuto počtu přesně odpovídá číslo $2^n$.}
+    \item $\sum_{k=0}^{n}(-1)^k\binom{n}{k} = 0$
+    
+    \solution{Co počítá suma na levé straně nyní? Je podezřele podobná té sumě výše, avšak obsahuje člen $(-1)^k$, který způsobí, že množiny liché velikosti započteme se záporným znaménkem. Můžeme si představit, že tedy sečteme všechny podmnožiny sudé velikosti a poté odečteme všechny podmnožiny liché velikosti. Už jsme si na předchozích cvičeních ukázali, že sudých podmnožin je stejně jako těch lichých a proto tedy nutně vyjde číslo $0$. Pozor, že rovnost neplatí pro obecné $n$ ale pouze pro $n\geq1$.}
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Rozlož a spočítej]
+Kolik existuje různých ekvivalencí na čtyřech prvcích?
+
+\solution{Využijeme toho, že každá ekvivalence odpovídá nějakému rozkladu podkladové množiny na třídy ekvivalence. Postupujeme systematicky podle velikosti největší třídy ekvivalence v rozkladu.}
+
+\solution{Máme-li největší třídu velikosti $1$, tak musí mít všechny třídy velikost $1$ a existuje pouze jeden takový způsob.}
+
+\solution{Má-li největší třída ekvivalence velikost $2$, tak je situace zajímavější. Máme $\binom{4}{2}$ způsobů, jak vybrat, která dvojice je v této největší třídě. Nyní mohou nastat dva případy pro každý takový výběr. V jednodušším případě jsou nevybrané prvky každý ve vlastní třídě, tedy máme dalších $\binom{4}{2}=6$ rozkladů. V tom složitějším, jsou zbylé prvky oba v jedné třídě také velikosti $2$, v takovém případě se stane, že i oni započítají jednou nás z jejich pohledu. Takových rozkladů je tedy $\frac{1}{2}\binom{4}{2}=3$.}
+
+\solution{Pokud má největší třída velikost $3$, tak ji můžeme zvolit $\binom{4}{3}=\binom{4}{1}=4$ způsoby.}
+
+\solution{Zbývá už jen jediný případ, kde jsou všechny prvky v jedné ekvivalenční třídě.}
+
+\solution{Celkem máme tedy $1+6+3+4+1=15$ ekvivalencí.}
+\end{problem}
+
+\begin{problem}[Kuličky a přihrádky]
+Kolik existuje možností, jak rozmístit $n$ nerozlišitelných kuliček do $k$ rozlišitelných přihrádek? Co když žádná přihrádka nesmí být prázdná?
+
+\solution{Abychom vyřešili tento problém, tak se hodí vhodně si zakódovat konfiguraci kuliček a přihrádek do řetězce nul a jedniček. Máme-li například $4$ přihrádky a $5$ kuliček, tak konfiguraci $((\circ,\circ),(),(\circ),(\circ,\circ))$ zakódujeme na řetězec $00110100$. Jak toto kódování funguje? Představíme si, že symboly $0$ odpovídají kuličkám a symboly $1$ tvoří předěly mezi jednotlivými přihrádkami. Všimněme si, že toto kódování je vzájemně jednoznačné. Pokud mi někdo poskytne kódování $10100010$, tak přesně dokáži rekonstruovat konfiguraci $(),(\circ),(\circ,\circ,\circ),(\circ)$. Tím jsme si problém zjednodušili, jelikož nyní stačí spočítat, kolika způsoby můžeme vytvořit řetězec s právě $n$ nulami a právě $k-1$ jedničkami.}
+
+\solution{Kolik takových řetězců existuje můžeme spočítat následující úvahou.  Všimneme si, že všechny řetězce mají délku $n + k - 1$. Jednotlivé pozice v řetězci s označíme čísly $\{1,2,\ldots,n+k-1\}$. Nyní každý řetězec obsahující přesně $n$ nul můžeme reprezentovat výčtem pozic, na kterých se nuly nacházejí. Například řetězec $10100010$ bychom reprezentovali jako $\{2,4,5,6,8\}$. Chceme-li spočítat, kolik existuje řetězců, tak místo toho můžeme ekvivalentně spočítat, kolik existuje $n$ prvkových podmnožin $n + k -1$ prvkové množiny. Výsledkem je tedy číslo $\binom{n+k-1}{n}=\binom{n+k-1}{k-1}$.}
+
+\solution{Pokud žádná přihrádka nesmí být prázdná, tak nejprve vložíme po jedné kuličce do každé z $k$ přihrádek. Následně počítáme počet způsobů, jak rozmístit $n-k$ kuliček do $k$ přihrádek a to už umíme spočítat.}
+
+\end{problem}
+
+
+\begin{problem}[Sestavme si vládu]
+Kombinatorickou úvahou vyjádřete výraz $\sum_{k=1}^{n}k\binom{n}{k}$ bez použití sumy.
+
+\solution{Tuto sumu je lehké spočítat, jakmile využijeme vztahu $k\binom{n}{k}=n\binom{n-1}{k-1}$. Proč tento vztah platí? Levou část rovnice si můžeme představit, následovně: Počítáme všechny způsoby, jak si nejprve z $n$-prvkové množiny vybrat $k$-prvkovou podmnožinu a následně z ní ještě vybrat jeden významný prvek (máme $k$ možností, jak to provést). Stejné číslo však můžeme spočítat i tím způsobem, že nejprve zvolíme význačný prvek z celé množiny (máme celkem $n$ možností, jak ho vybrat) a teprve pak dovybereme zbylé prvky do té $k$-prvkové podmnožiny, kterou chceme vyrobit. Tohoto „dovyrobení“ můžeme docílit celkem $\binom{n-1}{k-1}$ způsoby, jelikož nechceme znovu vybrat ten význačný prvek.}
+
+\solution{Vyzbrojeni vztahem výše získáme $\sum_{k=1}^{n}k\binom{n}{k}=\sum_{k=1}^{n}n\binom{n-1}{k-1}=n\sum_{k=1}^{n}\binom{n-1}{k-1}=n\sum_{k=0}^{n-1}\binom{n-1}{k}=n2^{n-1}$.}
+
+\end{problem}
+
+
+\end{document}
