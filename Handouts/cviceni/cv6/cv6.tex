@@ -1,0 +1,96 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{6}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{10.11.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[Kostky jsou vrženy]
+Hážeme $n$ rozlišitelnými šestistěnnými kostkami.
+
+\begin{enumerate}[label=\alph*)]
+    \item Kolik je v našem pravděpodobnostním prostoru elementárních jevů?
+
+    \item Jaká je pravděpodobnost, že nám padl součet $16$, pokud $n = 3$?
+
+    \item Jaká je pravděpodobnost, že na kostkách máme:
+    \begin{enumerate}[label=\roman*)]
+        \item alespoň $1$ šestka,
+        \item právě dvě šestky,
+        \item na všech to samé číslo,
+        \item na každých dvou různá čísla.
+    \end{enumerate}
+
+    \item Jaká musí být hodnota parametru $n$, aby měl jev „Alespoň na 3 kostkách z~$n$ padne alespoň 4“ pravděpodobnost právě $\tfrac{1}{2}$?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Narozeninový paradox]
+Mějme skupinu $n$ lidí. Předpokládejme, že přestupné dny neexistují a každý den se rodí stejný počet lidí.
+\begin{enumerate}[label=\alph*)]
+    \item Co je v tomto pravděpodobnostním prostoru množina elementárních jevů?
+    \item Nechť $A$ je jev „Aspoň dva z $n$ lidí mají narozeniny ve stejný den.“ (nehledě na rok narození). Jaká je pravděpodobnost jevu $A$?
+    \item Může pro nějaké $n$ pravděpodobnost jevu z $A$ nabývat hodnoty $1$?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Panna nebo orel?]
+Nechť $\textbf{x} = (x_1,x_2,x_3,x_4) \in \{0,1\}^4$ jsou výsledky čtyř po sobě jdoucích hodů spravedlivou mincí. Které z následujících jevů jsou nezávislé?
+\end{problem}
+\begin{enumerate}[label=\alph*)]
+    \item $A = \{ \textbf{x} : x_1 + x_2 + x_3 + x_4 \geq 2 \}$
+    \item $B = \{ \textbf{x} : x_1 = 1\}$
+    \item $C = \{ \textbf{x} : x_1 + x_2 + x_3 + x_4 \text{ je sudé }\}$
+\end{enumerate}
+
+\begin{problem}[Taková normální rodinka]
+Předpokládejme, že pravděpodobnost narození dcery je stejná jako pravděpodobnost narození syna. Víme, že daná rodina má právě dvě děti a že aspoň jeden z nich je chlapec. Jaká je pravděpodobnost, že daná rodina má právě dva syny? Jaký je náš pravděpodobnostní prostor?
+\end{problem}
+
+\begin{problem}[Monty Hall problem]
+Jste v televizní soutěži, ve které si jako výhru můžete odnést nové auto. Před vámi se nachází troje dveře. Za jedněmi z nich je schované auto a za zbylými dvěmi koza. Samotná soutěž probíhá následovně:
+\begin{enumerate}
+    \item dostanete možnost zvolit si jedny dveře. 
+    \item pořadatel vybere jedny z dveří, které jste nezvolili a za kterými se nachází koza. Vybrané dveře otevře a ukáže vám, že se tam opravdu nachází koza. 
+    \item máte možnost změnit svou prvotní volbu a zvolit jiné dveře.
+    \item pořadatel otevře vámi zvolené dveře a vy získáte věc za nimi.
+\end{enumerate}
+Zajímá nás:
+\begin{enumerate}[label=\alph*)]
+    \item Vyplatí se vám v kroku 3 změnit vaši původní volbu dveří?
+    \item Jaká je pravděpodobnost, že vyhrajete auto, pokud si v kroku 3 zvolíte jedny ze dvou zbývajících dveří náhodně?
+    \item A co když si v kroku 3 ze zbývajících dveří zvolíte ty, které jste v kroku 1 nezvolili?
+\end{enumerate}
+\end{problem}
+
+\end{document}
