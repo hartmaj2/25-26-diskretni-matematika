@@ -1,0 +1,74 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{7}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{17.11.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[Gaudeamus igitur]
+
+Nechť $P$ je následující píseň:
+
+\begin{figure}[h]
+    \includegraphics[width=\textwidth]{gaudeamus_igitur.png}
+\end{figure}
+
+
+
+\begin{enumerate}[label=\alph*)]
+    \item Naučte se hrát na klavír a zahrajte si melodii $P$
+    \item Naučte se zpívat a zazpívejte si text $P$
+    \item Naučte se latinsky a zjistěte, o čem $P$ je
+    \item Zjistěte, jak souvisí $P$ s Mezinárodním dnem studentstva
+\end{enumerate}
+
+\end{problem}
+
+\begin{problem}[Demonstremus igitur]
+Dokažte nebo vyvraťte: „Každé sudé číslo větší než $2$ lze vyjádřit jako součet dvou prvočísel.“
+\end{problem}
+
+\vspace{5cm}
+\begin{center}
+\fbox{
+    \begin{minipage}{0.8\textwidth}
+        \begin{center}
+            \textbf{\Large KDY -- KDYŽ NE TEĎ?}\\[6pt]
+            \textbf{\Large KDO -- KDYŽ NE MY?}\\[10pt]
+            \textbf{\large 17.\,11.\,1989}
+        \end{center}
+    \end{minipage}
+}
+\end{center}
+
+\end{document}
