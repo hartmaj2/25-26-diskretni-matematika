@@ -1,0 +1,56 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+
+%% metadata settings
+\newcommand{\tutnum}{7}
+\title{\tutnum. písemka z diskrétní matematiky}
+\author{Jan Hartman}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[5 bodů]
+Nechť $(\Omega,2^{\Omega},P)$ je diskrétní pravděpodobnostní prostor a $A,B \in 2^{\Omega}$ jsou jevy.
+\begin{enumerate}[label=\alph*)]
+    \item Napište definici nezávislosti jevů $A$ a $B$.
+    \item Pokud jsou $A$ a $B$ nezávislé, víme něco o $P(A \mid B)$? Zdůvodněte.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[5 bodů]
+Ve vaku máme 10 skleněných a 20 keramických sfér. Vytáhneme náhodných 7 z nich.
+Jaká je pravděpodobnost, že v těchto 7 sférách jsou právě 3 skleněné?
+(sféry do vaku nevracíme, výsledek není třeba vyčíslit).
+\end{problem}
+
+\begin{problem}[2 bonusové body]
+Popište formálně množinu elementárních jevů z předchozí úlohy.
+\end{problem}
+
+\end{document}
