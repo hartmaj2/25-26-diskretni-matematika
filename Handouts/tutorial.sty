@@ -29,12 +29,15 @@
 % theorem styles
 \newtheoremstyle{definitionstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.}{ }{\thmname{#1}}
 \newtheoremstyle{problemstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.\newline}{ }{\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}
+\newtheoremstyle{theoremstyle}{10pt}{10pt}{\normalfont}{}{\bfseries}{.\newline}{ }{\thmname{#1}\thmnote{ (#3)}}
 
 % theorems
 \theoremstyle{definitionstyle}
 \newtheorem{defn}{Definice}
 \theoremstyle{problemstyle}
 \newtheorem{problem}{Příklad}
+\theoremstyle{theoremstyle}
+\newtheorem{theorem}{Věta}
 
 % enumerate styles
 \setlist[enumerate]{itemsep=5pt, topsep=5pt, parsep=0pt}
