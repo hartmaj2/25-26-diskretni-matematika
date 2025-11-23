@@ -1,0 +1,102 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{8}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{24.11.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{defn}[Rozptyl]
+Pro náhodnou veličinu $X$ definujeme její rozptyl jako $\Var(X) \coloneq \E[(X-\E[X])^2]$.
+\end{defn}
+
+\begin{theorem}[Markovova nerovnost]
+Nechť $X$ je nezáporná náhodná veličina a $t > 0$. Potom platí: $\Pr(X \geq t) \leq \frac{\E[X]}{t}$.
+\end{theorem}
+
+\begin{problem}[Hazard se ne/vyplácí]
+Podivná existence v kápi vám nabídla následující hazardní hru se dvěma férovými šestistěnnými kostkami: Nejprve si zvolíte přirozené číslo $n$. Následně zaplatíte jeden zlatý a hodíte kostkami. Padne-li na kostkách součet hodnot $n$, tak vyhráváte $n$ zlatých. V opačném případě nedostanete nic.
+\begin{enumerate}[label=\alph*)]
+    \item Popište pravděpodobnostní prostor, ve kterém se hra odehrává?
+    \item Navrhněte náhodnou veličinu, která bude odpovídat vašemu získanému finančnímu obnosu, pokud za $n$ zvolíte $7$. Jaká je její střední hodnota?
+    \item Najděte všechny možné hodnoty $n$, pro které se vám tato hra vyplatí.
+\end{enumerate}
+
+
+\end{problem}
+
+\begin{problem}[Vánoční večírek]
+Na vánoční večírek přišlo $n$ lidí a každý přinesl jeden dárek. Dárky náhodně rozdělíme mezi účastníky. Jaká je střední hodnota počtu lidí, kteří dostanou svůj vlastní dárek?
+\end{problem}
+
+\begin{problem}[Mince opět na scéně]
+Úvahou určete, kolikrát je potřeba hodit férovou mincí tak, aby:
+\begin{enumerate}[label=\alph*)]
+    \item Střední hodnota počtu orlů byla $5$
+    \item Pravděpodobnost, že padne alespoň $5$ orlů byla přesně $\frac{1}{2}$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Užitečný vzoreček]
+Dokažte, že platí rovnost $\E[(X-\E[X])^2] = \E[X^2] - (\E[X])^2$
+\end{problem}
+
+\begin{problem}[Základní rozdělení]
+Pro n.v. $X$ z následujících pravděpodobnostních rozdělení spočítejte pravděpodobnosti jednotlivých hodnot, její střední hodnotu a rozptyl:
+\begin{enumerate}[label=\alph*)]
+    \item \textit{Bernoulliho}: $X$ je $1$ s pravděpodobností $p$, jinak $0$
+    \item \textit{Binomické}: $X$ je součet $n$ náhodných nezávislých veličin s Bernoulliho rozdělením
+    \item \textit{Geometrické}: $X$ je počet Bernoulliho pokusů, dokud nedostaneme $1$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Zaječí úmysly]
+Na palouku panáčkuje $n$ zajíců. Najednou se připlíží $n$ myslivců, každý z nich zamíří na jednoho náhodně vybraného zajíce a zastřelí ho.
+\begin{enumerate}[label=\alph*)]
+    \item Jaká je pravděpodobnost, že aspoň jeden zajíc přežije?
+    \item Jaká je střední hodnota přeživších zajíců?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Promiňte, už se nevejdete]
+Dopravní podnik na jedné autobusové lince spustil počítání cestujících. Spočítal, že při výjezdu z vybrané zastávky se v autobuse vyskytuje průměrně 8 cestujících. Autobus má kapacitu 40 lidí. Co můžeme říci o pravděpodobnosti, že po obsloužení této zastávky bude autobus plný (nebo dokonce přeplněný)?
+\end{problem}
+
+\begin{problem}[Nezávislost doplňků]
+Dokažte, že pokud jsou jevy $A$ a $B$ nezávislé, tak jsou i jevy $A$ a $\overline{B} = \Omega \setminus B$ nezávislé.
+\end{problem}
+
+\begin{problem}[Boj o nezávislost]
+Najděte na pravděpodobnostním prostoru $(\Omega,P)$, kde $\Omega \coloneq \{0,1\}^3$ a $\forall \omega \in \Omega: P(\omega)=\frac{1}{2^3}$ jevy $A,B,C$ pro které platí $P(A \cap B \cap C) = P(A) \cdot P(B) \cdot P(C)$, ale neplatí $P(A \cap B) = P(A) \cdot P(B)$.
+\end{problem}
+
+\end{document}
