@@ -1,0 +1,51 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+
+%% metadata settings
+\newcommand{\tutnum}{8}
+\title{\tutnum. písemka z diskrétní matematiky}
+\author{Jan Hartman}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[5 bodů]
+Nechť $(\Omega,P)$ je diskrétní pravděpodobnostní prostor a $X : \Omega \rightarrow \R$ je náhodná veličina. 
+
+\begin{enumerate}[label=\alph*)]
+    \item Definujte střední hodnotu náhodné veličiny $X$.
+    \item Nechť $Y : \Omega \rightarrow \R$ je druhá náhodná veličina. Co víme o střední hodnotě náhodné veličiny $X + Y$?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[5 bodů]
+Máme $n$ dětí a $m$ hraček. Každé dítě si náhodně zvolí právě jednu hračku a k té se rozběhne. O libovolné dvojici dětí $\{i,j\}$, kde $i \neq j$, řekneme, že je konfliktní, pokud se $i$ a $j$ rozběhly ke stejné hračce. Jaká je střední hodnota počtu konfliktních dvojic dětí?
+\end{problem}
+
+\end{document}
