@@ -1,0 +1,111 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{9}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{1.12.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{defn}
+Doplněk grafu $G = (V,E)$ je $\overline{G} = (V, \binom{V}{2} \setminus E)$, tedy graf, který má přesně opačné hrany.
+\end{defn}
+
+\begin{defn}
+Mějme graf $G=(\{v_1,\ldots,v_n\},E)$. Posloupnost $(\deg(v_1),\ldots,\deg(v_n))$ nazveme \textit{skóre} grafu $G$.
+\end{defn}
+
+\begin{problem}[Odhalujeme kamufláž]
+Uvažujme „standardní“ grafy $K_n$, $P_n$, $C_n$ a $K_{m,n}$ z přednášky. Které z nich jsou isomorfní?
+\end{problem}
+
+\begin{problem}[Já a já se perfektně doplňujeme]
+Najděte nějaký graf, který je izomorfní svému doplňku. Co musí platit pro jeho počet vrcholů a hran?
+\end{problem}
+
+\begin{problem}[Tudy most nevede]
+Dokažte, že graf $G$, jehož každý vrchol má sudý stupeň, neobsahuje most. Jako most považujeme hranu $e$ takovou, že $G - e$ má více komponent souvislosti než $G$.
+\end{problem}
+
+\begin{problem}[Stejné skóre není vše]
+Najděte dvojici neizomorfních grafů, jež mají stejné skóre:
+\begin{enumerate}[label=\alph*)]
+    \item libovolnou,
+    \item kde oba grafy jsou souvislé,
+    \item a navíc mají co nejmenší počet vrcholů.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Někdy skóre není nic]
+Rozhodněte, zda existuje graf, jehož skóre je:
+\begin{enumerate}[label=\alph*)]
+    \item $(2,2,2,2,2,2)$
+    \item $(3,3,3,3,3,3,3,3,3,3,3)$
+    \item $(0,1,2,3,\dots,n-1)$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Cesta tam a zase zpátky]
+Nechť $G$ je souvislý graf, který neobsahuje žádný cyklus a $u,v$ dva jeho vrcholy, které nejsou spojené hranou. Ukažte, že $G + \{u,v\}$ již cyklus obsahovat bude.
+\end{problem}
+
+\begin{problem}[Skóre z jedniček či dvojek]
+Jak vypadají grafy, které obsahují jen vrcholy stupně:
+\begin{enumerate}[label=\alph*)]
+    \item $1$,
+    \item $2$,
+    \item $1$ nebo $2$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Doplněk nesouvislého]
+Dokažte, že doplněk nesouvislého grafu je souvislý (ale opačně to obecně neplatí).
+\end{problem}
+
+\begin{problem}[Bipartitní grafy]
+Ukažte, že graf je bipartitní právě tehdy, neobsahuje-li kružnici liché délky.
+\end{problem}
+
+\begin{problem}[Nedokonalý isomorfismus]
+Připomeňme si definici isomorfismu:
+\[
+G \cong H \;\;\Longleftrightarrow\;\; (\exists f : G \to H \text{ bijekce} : \forall u,v \in V(G)\!: \{u,v\} \in E(G) \iff \{f(u),f(v)\} \in E(G)).
+\]
+
+Co se stane, když:
+\begin{enumerate}[label=\alph*)]
+    \item místo bijekce vyžadujeme jen prostou funkci?
+    \item místo bijekce si vystačíme s jakoukoliv funkcí?
+    \item místo druhé ekvivalence uvažujeme implikaci?
+\end{enumerate}
+\end{problem}
+
+\end{document}
