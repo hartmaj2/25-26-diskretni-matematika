@@ -1,0 +1,53 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+
+%% metadata settings
+\newcommand{\tutnum}{9}
+\title{\tutnum. písemka z diskrétní matematiky}
+\author{Jan Hartman}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+% Removed problems for the new template
+
+\begin{problem}[5 bodů]
+Najděte všechna $n$ taková, že $C_n$ je izomorfní svému doplňku $\overline{C_n}$  a dokažte, že žádná další neexistují. Kružnici $C_n$ definujeme pouze pro $n \geq 3$.
+\end{problem}
+
+\begin{problem}[5 bodů]
+Rozhodněte, pro která $k \geq 3$ existují přirozená čísla $m$, $n$ taková, že úplný bipartitní graf $K_{m,n}$ obsahuje cyklus $C_k$ jako podgraf.
+
+\noindent
+\textit{Hint: Pokud si nevíte rady, tak nejprve prozkoumejte tvrzení pro $k=3$ a $k=4$.}
+
+\end{problem}
+
+
+\end{document}
