@@ -1,0 +1,113 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{10}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{8.12.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Napady:
+% Nejmensi graf t.z. splnuje eulerovu formuli, ale neni to strom
+% Splňuje-li graf Eulerovu formuli, tak obsahuje list nebo izolovaný vrchol
+
+% Definovat:
+% strom
+% kostra
+% vnitrni vrchol, list
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[Co se pozná ze skóre]
+Zdůvodněte jaké z následujících vlastností grafu lze vyčíst z jeho skóre:
+\begin{enumerate}[label=\alph*)]
+    \item počet jeho vrcholů
+    \item počet jeho hran
+    \item počet jeho komponent souvislosti
+    \item zda je to strom či nikoliv
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Košaté stromy]
+Dokažte, že obsahuje-li strom vrchol stupně $k$, pak v něm je alespoň $k$ listů.
+\end{problem}
+
+\begin{problem}[Lekce anatomie]
+Dokažte, že když je graf souvislý, tak má kostru. Platí to i naopak?
+\end{problem}
+
+\begin{problem}[Ještě jedna definice stromu]
+Dokažte, že graf je strom právě tehdy, když je acyklický a platí Eulerova formule $|E| = |V| - 1$.
+\end{problem}
+
+\begin{problem}[Lesní formule]
+Ukažte, že platí: Graf s $k$ komponentami souvislosti je les právě tehdy, když platí $|E| = |V| - k$.
+\end{problem}
+
+\begin{problem}[Most, to je hlavní kost]
+Ukažte, že je-li hrana v grafu most, pak ji každá kostra obsahuje.
+\end{problem}
+
+\begin{problem}[Kolik koster si přejete, prosím?]
+Pro která $k \ge 0$ existuje graf s právě $k$ kostrami?
+\end{problem}
+
+\begin{problem}[Průměrný stupeň]
+Ukažte, že pokud pro graf $G$ platí Eulerova formule, tak obsahuje izolovaný vrchol nebo list.
+\end{problem}
+
+\begin{problem}[Kostra sem, kostra tam]
+Nechť $m$, $n$ a $k$ jsou přirozená čísla taková, aby příslušná zadání dávala smysl. Určete počet koster následujících grafů:
+\begin{enumerate}[label=\alph*)]
+    \item Strom na $n$ vrcholech
+    \item Úplný bipartitní graf $K_{n,2}$
+    \item $\Theta$-graf, tedy dva vrcholy stupně 3 spojené třemi cestami o délkách $m,n,k$. (Množiny vnitřních vrcholů jednotlivých cest jsou navzájem disjunktní)
+    % \item Úplný bipartitní graf $K_{n,3}$
+    \item „Činka“, tedy dvě kružnice $C_m, C_n$, kde je jeden vrchol první kružnice spojen s vrcholem druhé kružnice cestou délky $k$
+    \item Úplný graf na čtyřech vrcholech $K_4$
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Nadvláda listů]
+Ukažte, že každý netriviální strom, který neobsahuje vrchol stupně $2$, má více listů než vnitřních vrcholů.
+\end{problem}
+
+\begin{problem}[Extrémní grafy]
+Kolik nejvíce a kolik nejméně hran může mít:
+\begin{enumerate}[label=\alph*)]
+    \item souvislý graf na $n$ vrcholech
+    \item acyklický graf
+    \item graf s $k$ komponentami souvislosti
+    % \item Úplný bipartitní graf $K_{n,3}$
+    \item graf který neobsahuje trojúhelník $C_3$ jako podgraf
+\end{enumerate}
+\end{problem}
+
+
+\end{document}
