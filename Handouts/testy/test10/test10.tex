@@ -1,0 +1,61 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+
+%% metadata settings
+\newcommand{\tutnum}{10}
+\title{\tutnum. písemka z diskrétní matematiky}
+\author{Jan Hartman}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[5 bodů]
+Nechť $T$ je strom na $10$ vrcholech, který obsahuje právě $3$ listy. Určete počet vrcholů stupně $2$ v $T$.
+\end{problem}
+
+\begin{problem}[5 bodů]
+Určete počet koster následujících grafů:
+\begin{enumerate}[label=\alph*)]
+    \item $K_4$, tedy úplného grafu na čtyřech vrcholech
+    \item grafu na obrázku níže
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics{kostry.pdf}
+\end{figure}
+
+\end{problem}
+
+\begin{problem}[2 bonusové body]
+Kolik mají grafy z předchozích úloh navzájem neizomorfních koster.
+\end{problem}
+
+
+\end{document}
