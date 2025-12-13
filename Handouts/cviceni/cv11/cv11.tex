@@ -1,0 +1,111 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{11}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{15.12.2025}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Napady:
+% Nejmensi graf t.z. splnuje eulerovu formuli, ale neni to strom
+% Splňuje-li graf Eulerovu formuli, tak obsahuje list nebo izolovaný vrchol
+
+% Definovat:
+% strom
+% kostra
+% vnitrni vrchol, list
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[Eulerodetektor]
+U následujících grafů rozhodněte, zda jsou eulerovské:
+\begin{enumerate}[label=\alph*)]
+    \item pro libovolnou množinu $M$ graf $G$ s vrcholy $V = 2^M$ a množinou hran $E = \{ \{S,U\} : S \cap U = \emptyset \}$ 
+    \item graf $G'$, který vznikne odebráním vrcholu $M$ z grafu $G$ (a všech hran s ním incidentních)
+    \item souvislý graf $G$ s lichým počtem vrcholů, jehož doplněk má všechny stupně sudé
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Jeden Euler stačí]
+Najděte eulerovský graf, jehož doplněk je souvislý, ale není eulerovský.
+\end{problem}
+
+\begin{problem}[Graf v rozkladu]
+Ukažte, že libovolný graf, jehož všechny vrcholy mají sudý stupeň, lze rozložit na hranově disjunktní sjednocení kružnic a izolovaných vrcholů. (kružnice jsou hranově disjunktní, pokud neobsahují společnou hranu)
+\end{problem}
+
+\hrule
+
+\begin{defn}
+$Q_n$ (n-rozměrná krychle) je graf s vrcholy $2^{[n]}$ a hrany vedou mezi těmi
+podmnožinami $A, B$, kde $|A \,\triangle\, B| = 1$.
+\end{defn}
+
+\begin{problem}[Řekněme si to na rovinu]
+Rozhodněte, zda jsou grafy na obrázku rovinné či nikoliv.
+\end{problem}
+\begin{figure}[h]
+    \centering
+    \includegraphics{planar_nonplanar.pdf}
+\end{figure}
+
+\begin{problem}[Dračí doupě]
+Pro každé $k \geq 1$ určete, zda existuje $k$-regulární rovinný graf.
+
+\noindent
+\textit{Hint: Můžete například využít toho, že grafy odpovídající kostrám těles v prostoru jsou rovinné.}
+\end{problem}
+
+\begin{problem}[Nerovinnost tisíckrát jinak]
+Bez použití Kuratowského věty dokažte, že $K_5$ není rovinný.
+\end{problem}
+
+\begin{problem}[Čtyřdimenzionální krychle]
+Ukažte, že graf $Q_4$ odpovídající čtyřdimenzionální krychli není rovinný.
+\end{problem}
+
+\begin{problem}[Regularita není zadarmo]
+Může existovat $3$-regulární graf, jehož všechny stěny budou šestiúhelníky?
+A co pětiúhelníky?
+\end{problem}
+
+\begin{problem}[Buď ty nebo já]
+Dokažte, že pro každý graf $G$ na jedenácti vrcholech je $G$ nebo $\overline{G}$ nerovinný.
+\end{problem}
+
+\begin{problem}[Není vás trochu moc?]
+Dokažte, že v rovinném grafu nejvýše polovina jeho vrcholů může mít stupeň větší než $11$.
+\end{problem}
+
+\begin{problem}[Torus Makto]
+Nakreslete $K_{3,3}$ na torus.
+\end{problem}
+
+\end{document}
