@@ -19,3 +19,5 @@ Přednáška se koná v pondělí od 12:20 v posluchárně N1, přednášející
 24.11. Grafy - definice grafu, podgrafu a izomorfismu, příklady grafů (prázdný, úplný, cesta, kružnice), bipartitní grafy. Souvislost grafů a vzdálenost, okolí vrcholu a stupeň, princip sudosti.
 
 1.12. Stromy - definice, existence a odebrání listu, ekvivalentní charakterizece stromů. Kostry grafů. Eulerovské grafy (nedokončeno, pokračování příště).
+
+8.12. Důkaz Eulerovy věty. Rovinné grafy - základní pojmy (oblouk, top. kružnice, nakreslení grafu, stěny), Eulerova formule, maximální počet hran rov. grafu a důsledky, Kuratovského věta.
