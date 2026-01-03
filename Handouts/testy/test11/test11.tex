@@ -1,0 +1,52 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a5paper,margin=1cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+
+
+%% metadata settings
+\newcommand{\tutnum}{11}
+\title{\tutnum. písemka z diskrétní matematiky}
+\author{Jan Hartman}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill Jméno: \hspace{4cm}}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Nezapomeňte vaše výsledky zdůvodnit!}  
+
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{problem}[5 bodů]
+Nechť $G$ je eulerovský graf, jehož doplněk $\overline{G}$ je souvislý. Určete, zda $\overline{G}$ je eulerovský v závislosti na počtu vrcholů $n$. 
+\end{problem}
+
+\begin{problem}[5 bodů]
+Rozhodněte, zda existuje $3$-regulární rovinný graf splňující:
+\begin{enumerate}[label=\alph*)]
+    \item všechny jeho stěny jsou čtyřúhelníky.
+    \item má právě dvě pětiúhelníkové a právě dvě osmiúhelníkové stěny. Nemá žádné jiné stěny.
+\end{enumerate}
+\end{problem}
+
+
+
+\end{document}
