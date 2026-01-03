@@ -1,0 +1,108 @@
+% Document class
+\documentclass[10pt]{article}
+
+% Preamble
+\usepackage[a4paper,margin=2.5cm,includefoot]{geometry} % includefoot makes footer stay inside of the page
+
+\usepackage{../../tutorial}
+\usepackage{subcaption}
+
+%% metadata settings
+\newcommand{\tutnum}{12}
+\title{\tutnum. cvičení z diskrétní matematiky}
+\author{Jan Hartman}
+\date{5.1.2026}
+
+\newcommand{\teacherurl}{https://kam.mff.cuni.cz/~hartmaj/}
+\newcommand{\titlerule}{%
+    \noindent %
+    \makebox[\textwidth]{\large \thetitle \hfill \thedate}
+    \rule{\textwidth}{0.4pt}%
+}
+
+%% headers and footers settings
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header/footer (e.g. by default, footer would show page numbers)
+% \fancyhead[L]{\thetitle}   % left -> title
+% \fancyhead[C]{} % center -> unused
+% \fancyhead[R]{\thedate}  % right -> date
+\fancyfoot[C]{\small Více info k cvičení: \url{\teacherurl}}  
+
+% Napady:
+% Nejmensi graf t.z. splnuje eulerovu formuli, ale neni to strom
+% Splňuje-li graf Eulerovu formuli, tak obsahuje list nebo izolovaný vrchol
+
+% Definovat:
+% strom
+% kostra
+% vnitrni vrchol, list
+
+% Document body
+\begin{document}
+
+\titlerule
+
+\begin{defn}[Klika]
+Klikou grafu $G$ nazýváme jeho libovolný podgraf izomorfní úplnému grafu $K_n$ pro nějaké $n$.
+\end{defn}
+
+\begin{defn}[Klikovost]
+Klikovost grafu $G$ je velikost největší kliky, kterou $G$ obsahuje jako podgraf.
+\end{defn}
+
+\begin{defn}[Krychle]
+Definujeme $n$-dimenzionální krychli jako graf $Q_n$, jehož vrcholy odpovídají posloupnostem nul a jedniček délky $n$, tedy $V(Q_n)=\{0,1\}^n$, a mezi dvěma vrcholy $v,w$ vede hrana právě tehdy, když se posloupnosti $v$ a $w$ liší právě v jedné pozici.
+\end{defn}
+
+\begin{problem}[Princezniny korále]
+Nechť $C_n$ je kružnice na $n$ vrcholech. Stanovte $\chi (C_n)$ v závislosti na $n$.
+\end{problem}
+
+\begin{problem}[Hledáme grafy na barvení]
+Najděte příklad grafu, jehož barevnost je:
+\begin{enumerate}[label=\alph*)]
+    \item menší než jeho degenerovanost
+    \item větší než jeho degenerovanost
+    \item větší než jeho klikovost
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Padesát odstínů zelené]
+Nechť $T$ je strom. Určete chromatické číslo grafu $T$.
+\end{problem}
+
+\begin{problem}[Dokud je smrt nerozdělí]
+Mějme dva grafy $G_1$ a $G_2$ s barevnostmi $\chi(G_1)$ a $\chi(G_2)$. Jaká bude barevnost grafu $H$, který vznikne slepením $G_1$ a $G_2$ za libovolný vrchol?
+\end{problem}
+
+\begin{problem}[Nestačí mi barvy]
+Určete barevnost grafu níže a zdůvodněte:
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=100pt]{colorgraph.pdf}
+\end{figure}
+\end{problem}
+
+\begin{problem}[Malý stupeň, mnoho radosti]
+Dokažte, že každý rovinný graf má barevnost nejvýše $6$.
+\end{problem}
+
+\begin{problem}[Obarvení tisíckrát jinak]
+Spočtěte, kolik existuje různých obarvení úplného grafu $K_n$ pomocí $k$ barev. Některé barvy mohou zůstat nevyužité. Obarvení $c_1$ a $c_2$ jsou různá, pokud existuje vrchol $v$ t.ž. $c_1(v) \neq c_2(v)$.
+\end{problem}
+
+\begin{problem}[Graf na zakázku se zákazem]
+Nalezněte graf, jehož chromatické číslo je $4$, ale neobsahuje podgraf izomorfní $K_4$. 
+\end{problem}
+
+\begin{problem}[Krychle a zběsile]
+Nechť $Q_d$ je $d$-dimenzionální krychle. Určete $\chi(Q_d)$ v závislosti na $d$.
+\end{problem}
+
+\begin{problem}[Trojúhelníky jsou tabu]
+Buď $G$ rovinný graf, který neobsahuje $C_3$ jako podgraf, tedy $G$ je graf bez trojúhelníků. Dokažte, že $\chi(G) \leq 4$.
+\end{problem}
+
+\end{document}
